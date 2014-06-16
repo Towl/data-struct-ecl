@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cours intitulé="XML Schema" prof="P6">
+ <étudiant id="P2">
+  <note>11.3</note>
+  <absences>2</absences>
+  <comment>Peut mieux faire</comment>
+ </étudiant>
+ <étudiant id="P11">
+  <note>12.1</note>
+  <absences>0</absences>
+  <comment>Un peu perdue</comment>
+ </étudiant>
+ <étudiant id="P9">
+  <note>14.0</note>
+  <absences>0</absences>
+  <comment>Le mieux est l'ennemi du bien</comment>
+ </étudiant>
+ <étudiant id="P4">
+  <note>12.0</note>
+  <absences>2</absences>
+  <comment>Manque de recul</comment>
+ </étudiant>
+ <étudiant id="P8">
+  <note>11.0</note>
+  <absences>3</absences>
+  <comment>Semble absent</comment>
+ </étudiant>
+ <étudiant id="P3">
+  <note>17</note>
+  <absences>0</absences>
+  <comment>Bon résultats</comment>
+ </étudiant>
+</cours>

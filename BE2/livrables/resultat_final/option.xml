@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<?xml-stylesheet href="xsl/main_final.xsl" type="text/xsl"?>
+
+<!DOCTYPE option [
+	<!ENTITY personnes SYSTEM "personnes.xml">
+	<!ENTITY cours-tv SYSTEM "cours-tv.xml">
+	<!ENTITY cours-xs SYSTEM "cours-xs.xml">
+	<!ENTITY cours-sv SYSTEM "cours-sv.xml">
+	<!ENTITY cours-sp SYSTEM "cours-sp.xml">
+	<!ENTITY cours-xp SYSTEM "cours-xp.xml">
+]>
+<option>
+ &personnes;
+ &cours-tv;
+ &cours-xs;
+ &cours-xp;
+ &cours-sv;
+ &cours-sp;
+</option>

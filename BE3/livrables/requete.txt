@@ -1,0 +1,18 @@
+POST /~muller/cours/xrpc/server/smart-server.php HTTP/1.0
+Host: tic01.tic.ec-lyon.fr
+User-Agent: client artisanal
+Content-Type: text/xml
+Content-Length: 164
+Connection: Close
+
+<?xml version="1.0"?>
+<methodCall>
+<methodName>departement.infos</methodName>
+<params>
+<param>
+<value>
+<string>92</string>
+</value>
+</param>
+</params>
+</methodCall>

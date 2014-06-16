@@ -1,0 +1,144 @@
+.sommaire{
+	position:fixed;
+	left:10px;
+	top:10px;
+	width:20%;
+}
+
+.sommaire-title{
+	font-size:20px;
+}
+
+.sommaire-content{
+	width:100%;
+}
+
+.subnav{
+	font-size:80%;
+	margin-left:5%;
+}
+
+.livrables{
+	position:fixed;
+	right:10px;
+	top:10px;
+	width:20%;
+}
+
+.livrables-title{
+	font-size:20px;
+}
+
+.livrables-content{
+	width:100%;
+	margin:0px;
+}
+
+th{
+	text-align:center;
+}
+
+.corps{
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-top: 10px;
+	text-align:justify;
+}
+
+p{
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.note:before{
+	content:"Note : ";
+	font:bold;
+}
+
+code{
+	background:#E9E9E9;
+	color:#5050FF;
+}
+
+.code-container{
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 13px;
+	background-color: #f5f5f5;
+	max-height:500px;
+	max-width:100%;
+	overflow-x:scroll;
+	margin:0;
+}
+
+.code-panel{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+}
+
+.scrolled-code{
+	white-space: nowrap;
+	max-width:1000px;
+}
+
+.codeXML{	
+	color:blue;
+}
+
+.codeDTD{
+	color:black;
+}
+
+.codeJS{
+	color:black;
+}
+
+.tab{
+	padding-left:15px;
+}
+
+.tab-output{
+	padding-left:84px;
+}
+
+.tab-stylesheet{
+	padding-left:112px;
+}
+
+.element{
+	color:blue;
+}
+
+.attribut{
+	color:red;
+}
+
+.process-instruct{
+	color:red;
+}
+
+.comment{
+	color:green;
+}
+
+.valeur{
+	color:purple;
+}
+
+.contenuTexte{
+	color:black;
+}
+
+.variable{
+	font-style:italic;
+	font-weight:bold;
+	color:#002682;
+}
+
+.string{
+	color:#808080;
+}
+
+.number{
+	color:red;
+}

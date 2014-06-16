@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cours intitulé="XPath" prof="P6">
+ <étudiant id="P4">
+  <note>6</note>
+  <absences>1</absences>
+  <comment>Devrait se mettre à jour</comment>
+ </étudiant>
+ <étudiant id="P3">
+  <note>14</note>
+  <absences>0</absences>
+  <comment>Excellent élément</comment>
+ </étudiant>
+ <étudiant id="P8">
+  <note>15.0</note>
+  <absences>2</absences>
+  <comment>Trop souvent dans les nuages</comment>
+ </étudiant>
+ <étudiant id="P10">
+  <note>12</note>
+  <absences>3</absences>
+  <comment>Trop dissipé</comment>
+ </étudiant>
+ <étudiant id="P5">
+  <note>7.5</note>
+  <absences>0</absences>
+  <comment>Fait des efforts, mais doit progresser</comment>
+ </étudiant>
+  <étudiant id="P7">
+  <note>8.9</note>
+  <absences>0</absences>
+  <comment>Fait des efforts, mais doit progresser</comment>
+ </étudiant>
+</cours>

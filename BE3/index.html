@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta name="authors" content="Franck Coutouly, Jacques Meykiechel"/>
+		<link href="stylesheets/bootstrap.css" rel="stylesheet"/>
+		<link href="stylesheets/bootstrap-theme.css" rel="stylesheet"/>
+		<link href="stylesheets/index.css" rel="stylesheet"/>
+		<title>Représentation et manipulation de données structurées -€“ BE3</title>
+	</head>
+	<body>
+		<div class="panel panel-default sommaire">
+            <div class="panel-heading">
+              <h3 class="panel-title sommaire-title">Sommaire</h3>
+			</div>
+			<div class="panel-content sommaire-content">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#requete">I. La  requête</a></li>
+					<li>
+						<a href="#client">II. Le client</a>
+						<ul class="nav subnav">
+							<li><a href="#formulaire">a. Le formulaire</a></li>
+							<li><a href="#script">b. Le script</a></li>
+						</ul>
+					</li>
+					<li><a href="#conclusion">Conclusion</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel panel-default livrables">
+            <div class="panel-heading">
+              <h3 class="panel-title livrables-title">Livrables</h3>
+			</div>
+			<div class="panel-content">
+				<div class="list-group livrables-content">
+					<a href="livrables\requete.txt" class="list-group-item">Requête</a>
+					<a href="livrables\client.html" class="list-group-item">Client</a>
+				</div>
+			</div>
+		</div>
+		<div class="corps">
+			<h1 id="titre">Communication</h1>
+			<h4>Représentation et manipulation de données structurées - BE3</h4>
+			<p>
+				Le présent document décrit le travail réalisé au cours du troisième bureau d'étude
+				du module ouvert disciplinaire "Représentation et manipulation de données structurées",
+				par la colaboration de Jacques Meykiechel et Franck Coutouly (groupe 5).
+			</p>
+			<h2 id="introduction">Introduction</h2>
+			<p>
+				Ce bureau d'étude a pour object la prise en main du protocole XML-RPC. Celui-ci est destiné à simplifier la transmission 
+				de données au format XML via le protocole HTTP. Pour ce faire on commencera par analyser une application
+				fonctionnelle utilisant ce protocole pour communiquer avec un serveur distant. Puis la conception d'un client communiquant
+				avec ce même serveur permettra d'approfondir sont utilisation en association avec l'API javascript Ajax.
+			</p>
+			<h2 id="requete">I. La requête</h2>
+			<p>
+				Une application est fournie. Celle-ci est un client XTHML composé d'un simple formulaire. Le formulaire est transmis à un
+				serveur distant sur lequel ce trouve une autre application. La transmission du formulaire est "cachée" par l'utilisation du PHP
+				et ne peut être directement analysée. Cependant après plusieurs essais et en s'appuyant sur le cours la requète envoyée par
+				le client à pu être déterminée.
+				Cette requête est la suivante : 
+			</p>
+			<div class="panel panel-default code-panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">Requête</h3>
+				</div>
+				<div class="panel-content">	
+					<div class="code-container">
+						<div class="scrolled-code codeXML">
+							<div class="codeJS">	
+								<span class="variable">POST</span> /~muller/cours/xrpc/server/smart-server.php HTTP/1.0<br/>
+								<span class="variable">Host:</span> tic01.tic.ec-lyon.fr<br/>
+								<span class="variable">User-Agent:</span> client artisanal<br/>
+								<span class="variable">Content-Type:</span> text/xml<br/>
+								<span class="variable">Content-Length:</span> 164<br/>
+								<span class="variable">Connection:</span> Close<br/>
+							</div>
+							<br/>
+							<span class="process-instruct">&lt;?</span>xml <span class="attribut">version</span>=<span class="valeur">"1.0"</span><span class="process-instruct">?&gt;</span><br/>
+							&lt;methodCall&gt;<br/>
+							&lt;methodName&gt;<span class="contenuTexte">departement.infos</span>&lt;/methodName&gt;<br/>
+							&lt;params&gt;<br/>
+							&lt;param&gt;<br/>
+							&lt;value&gt;<br/>
+							&lt;string&gt;<span class="contenuTexte">92</span>&lt;/string&gt;<br/>
+							&lt;/value&gt;<br/>
+							&lt;/param&gt;<br/>
+							&lt;/params&gt;<br/>
+							&lt;/methodCall&gt;<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				La valeur <code class="codeXML contenuTexte">92</code> contenue entre les balises <code class="codeXML">&lt;string&gt;</code>
+				est le numéro du département qui a été choisi arbitrairement pour effectuer le test. La requète est également disponible
+				sous forme de fichier texte en cliquant sur ce <a href="livrables\requete.txt">lien</a>.
+			</p>
+			<p>
+				A partir de là, il est possible de concevoir une autre application cliente fournissant le même service que celle analysée ici.
+			</p>
+			<h2 id="client">II. Le client</h2>
+			<p>
+				Il est désormais souhaité de construire un client XHTML permettant d'envoyer une requête au service web utilisé précédement
+				et d'afficher la réponse de manière lisible sans rafraichissement de la page. L'API Ajax de javascript répond
+				parfaitement à ce besoin. 
+			</p>
+			<h3 id="formulaire">a. Le formulaire</h3>
+			<p>
+				Le client XHTML n'est en fait qu'un simple formulaire premettant à l'utilisateur d'indiquer le numéro du département dont il
+				veut connaître les détails.
+			</p>
+			<div class="panel panel-default code-panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">Formulaire</h3>
+				</div>
+				<div class="panel-content">	
+					<div class="code-container">
+						<div class="scrolled-code codeXML">
+							&lt;body&gt;<br/>
+							<div class="tab">
+								&lt;div <span class="attribut">class</span>=<span class="valeur">"row"</span>&gt;<br/>
+								<div class="tab">
+									&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-3"</span>&gt;<br/>
+									<div class="tab">
+										&lt;form <span class="attribut">id</span>=<span class="valeur">"form"</span> 
+										<span class="attribut">class</span>=<span class="valeur">"form-horizontal"</span> 
+										<span class="attribut">action</span>=<span class="valeur">"javascript:;"</span> 
+										<span class="attribut">method</span>=<span class="valeur">"post"</span>&gt;<br/>
+										<div class="tab">
+											&lt;div <span class="attribut">class</span>=<span class="valeur">"form-group"</span>&gt;<br/>
+											<div class="tab">
+												&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-9"</span> 
+												<span class="attribut">style</span>=<span class="valeur">"text-align:right;"</span>&gt;<br/>
+												<div class="tab">
+													&lt;label <span class="attribut">class</span>=<span class="valeur">"control-label"</span>&gt;<span class="contenuTexte">Numéro de département : </span>&lt;/label&gt;<br/>
+												</div>
+												&lt;/div&gt;<br/>
+												&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-2"</span>&gt;<br/>
+												<div class="tab">
+													&lt;input <span class="attribut">id</span>=<span class="valeur">"num"</span> 
+													<span class="attribut">class</span>=<span class="valeur">"pop form-control"</span> 
+													<span class="attribut">type</span>=<span class="valeur">"text"</span> 
+													<span class="attribut">name</span>=<span class="valeur">"numero"</span> 
+													<span class="attribut">style</span>=<span class="valeur">"width:50px;"</span>/&gt;<br/>
+												</div>
+												&lt;/div&gt;<br/>
+											</div>
+											&lt;/div&gt;<br/>
+										</div>
+										&lt;/form&gt;<br/>
+									</div>
+									&lt;/div&gt;<br/>
+									&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-1"</span>&gt;<br/>
+									<div class="tab">
+										&lt;button <span class="attribut">id</span>=<span class="valeur">"sendRequest"</span> 
+										<span class="attribut">type</span>=<span class="valeur">"submit"</span> 
+										<span class="attribut">class</span>=<span class="valeur">"btn btn-primary"</span> 
+										<span class="attribut">form</span>=<span class="valeur">"form"</span>&gt;<span class="contenuTexte">Send</span>&lt;/button&gt;<br/>
+									</div>
+									&lt;/div&gt;<br/>
+								</div>
+								&lt;/div&gt;<br/>
+								&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;<br/>
+								&lt;/div&gt;<br/>
+								&lt;script <span class="attribut">type</span>=<span class="valeur">"text/javascript"</span>&gt;<br/>
+								&lt;/script&gt;
+							</div>
+							&lt;body&gt;<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				L'entête du client est classique et ne présente aucune particularité, c'est pourquoi elle est absente de l'extrait de code ci-dessus.
+				Cet extrait est utilisé pour créer un formulaire contenant un label, un champ de saisie de texte et un bouton. Le bouton est de
+				<code class="codeXML attribut">type</code> <code class="codeXML valeur">"submit"</code> afin d'envoyer le formulaire au 
+				destinataire, cependant l'attribut <code class="codeXML attribut">action</code> de la balise 
+				<code class="codeXML">&lt;form&gt;</code> a pour valeur <code class="codeXML valeur">"javascript:;"</code>. Ceci signifie que
+				le traitement des données du formulaire lors d'un clique sur le bouton est réalisé par un script javascript. Celui-ci doit donc
+				être présent dans le document sinon il ne se passera rien.
+			</p>
+			<p>
+				Il y a également une balise <code class="codeXML">&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;</code>
+				qui ne contient rien. Celle-ci sera utilisé par la suite pour afficher la réponse du serveur à l'aide d'une fonction javascript. Enfin
+				la dernière balise <code class="codeXML">&lt;script&gt;</code> contiendra le code javascript nécessaire au bon fonctionnement du client.
+			</p>
+			<h3 id="script">b. Le script</h3>
+			<p>
+				Maintenant que le formulaire est en place le script javascript peut être ajouté. Il sera placé à la fin du fichier XHTML, juste
+				avant la fermeture de la balise <code class="codeXML">&lt;body&gt;</code>. L'emplacement du code javascript dans une page HTML n'a
+				pas vraiment d'importance puisqu'il est interprété après le chargement de la page. Cependant les parseurs des navigateurs "lisent" les
+				fichiers HTML de haut en bas et affichent le contenu ainsi "lu" au fur et à mesure. Donc le faite de placer le code javascript à la fin
+				du fichier évite de ralentir l'affichage de la page. Néanmoins ici le code javascript utilisé est vraiment léger et la nuance serait
+				difficilement observable.
+			</p>
+			<div class="panel panel-default code-panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">Script</h3>
+				</div>
+				<div class="panel-content">	
+					<div class="code-container">
+						<div class="scrolled-code codeJS">
+							<span class="variable">var</span> req = null;<br/>
+							<span class="variable">var</span> READY_STATE_COMPLETE = <span class="number">4</span>;<br/>
+							<br/>
+							<span class="variable">function</span> sendRequest(messageBody) {<br/>
+							<div class="tab">
+								httpMethod = <span class="string">"POST"</span>;<br/>
+								port = <span class="string">'80'</span>;<br/>
+								host = <span class="string">'tic01.tic.ec-lyon.fr'</span><br/>
+								url = <span class="string">'http://'</span>+host+<span class="string">':'</span>+port+<span class="string">'/~muller/cours/xrpc/server/smart-server.php'</span>;<br/>
+								<span class="variable">if</span> ( req = initXmlHttpRequest() ) {<br/>
+								<div class="tab">
+									req.onreadystatechange = <span class="variable">function</span>() {<br/>
+									<div class="tab">
+										<span class="variable">var</span> state = req.readyState;<br/>
+										<span class="variable">var</span> data = null;<br/>
+										<span class="variable">if</span> ( state == READY_STATE_COMPLETE ) {<br/>
+										<div class="tab">
+											data = req.responseXML;<br/>
+										</div>
+										}<br/>
+										<span class="variable">else</span> {<br/>
+										<div class="tab">
+											data = <span class="string">"readystate : ["</span>+state+<span class="string">"]\n"</span>;<br/>
+										</div>
+										}<br/>
+										displayResponse(data);<br/>
+									</div>
+									};<br/>
+									req.open(httpMethod,url,<span class="variable">true</span>);<br/>
+									req.setRequestHeader(<span class="string">"Content-Type"</span>,<span class="string">"text/xml"</span>);<br/>
+									req.setRequestHeader(<span class="string">"Content-Length"</span>,messageBody.length);<br/>
+									req.send(messageBody);<br/>
+								</div>
+								}<br/>
+							</div>
+							}<br/>
+							<br/>
+							<span class="variable">function</span> initXmlHttpRequest() {<br/>
+							<div class="tab">
+								<span class="variable">var</span> requestObject = null;<br/>
+								<span class="variable">if</span>(window.XMLHttpRequest) <span class="comment">// Firefox</span> <br/>
+								<div class="tab">
+								   requestObject = <span class="variable">new</span> XMLHttpRequest(); <br/>
+								</div>
+								<span class="variable">else</span> <span class="variable">if</span>(window.ActiveXObject) <span class="comment">// Internet Explorer</span> <br/>
+								<div class="tab">
+									requestObject = <span class="variable">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>); <br/>
+								</div>
+								<span class="variable">else</span> {<span class="comment"> // XMLHttpRequest non supporté par le navigateur</span> <br/>
+								<div class="tab">   
+								   alert(<span class="string">"Votre navigateur ne supporte pas les objets XMLHTTPRequest..."</span>); <br/>
+								</div>
+								} <br/>
+								<span class="variable">return</span> requestObject;<br/>
+							</div>
+							}<br/>
+							<br/>
+							<span class="variable">function</span> query(departNumber){<br/>
+							<div class="tab">
+								<span class="variable">var</span> contentRequest = <span class="string">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;'</span>+<br/>
+								<div class="tab">
+									<span class="string">'&lt;methodCall&gt;'</span>+<br/>
+									<div class="tab">
+										<span class="string">'&lt;methodName&gt;departement.infos&lt;/methodName&gt;'</span>+<br/>
+										<span class="string">'&lt;params&gt;'</span>+<br/>
+										<div class="tab">
+											<span class="string">'&lt;param&gt;'</span>+<br/>
+											<div class="tab">
+												<span class="string">'&lt;value&gt;'</span>+<br/>
+												<div class="tab">
+													<span class="string">'&lt;string&gt;'</span>+<br/>
+													<div class="tab">
+														departNumber+<br/>
+													</div>
+													<span class="string">'&lt;/string&gt;'</span>+<br/>
+												</div>
+												<span class="string">'&lt;/value&gt;'</span>+<br/>
+											</div>
+											<span class="string">'&lt;/param&gt;'</span>+<br/>
+										</div>
+										<span class="string">'&lt;/params&gt;'</span>+<br/>
+									</div>
+									<span class="string">'&lt;/methodCall&gt;'</span>;<br/>
+								</div>
+								sendRequest(contentRequest);<br/>
+							</div>
+							}<br/>
+							<br/>
+							(<span class="variable">function</span>() {<br/>
+							<div class="tab">
+								document.getElementById(<span class="string">"sendRequest"</span>).onclick = <span class="variable">function</span>(){<br/>
+								<div class="tab">
+									<span class="variable">var</span> inputs = document.getElementsByTagName(<span class="string">'input'</span>);<br/>
+									<span class="variable">var</span> departNumber = inputs[<span class="number">0</span>].value;<br/>
+									query(departNumber);<br/>
+								</div>
+								};<br/>
+							</div>
+							})();<br/>
+							<br/>
+							<span class="variable">function</span> displayResponse(xmlDocumentResponse) {<br/>
+							<div class="tab">
+								<span class="variable">var</span> members = xmlDocumentResponse.getElementsByTagName(<span class="string">"member"</span>);<br/>
+								<span class="variable">var</span> xhtmlResponse = <span class="string">"&lt;h2&gt;&lt;u&gt;Infos&lt;/u&gt;&lt;/h2&gt;"</span>;<br/>
+								<span class="variable">for</span>(i_member = 0; i_member &lt; members.length; i_member++){<br/>
+								<div class="tab">
+									xhtmlResponse = xhtmlResponse + <span class="string">"&lt;h3&gt;"</span> + <span class="string">"&lt;b&gt;"</span> +<br/> 
+									<div class="tab">
+													members[i_member].getElementsByTagName(<span class="string">"name"</span>).item(0).textContent + <span class="string">" : "</span> + <span class="string">"&lt;/b&gt;"</span> +<br/>
+													members[i_member].getElementsByTagName(<span class="string">"value"</span>).item(0).textContent + <span class="string">"&lt;/h3&gt;"</span>;<br/>
+									</div>
+								</div>
+								}<br/>
+								document.getElementById(<span class="string">"response"</span>).innerHTML = xhtmlResponse;<br/>
+							</div>
+							}<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>
+				Le code ci-dessus est le code javascript complet utilisé pour envoyer la requête au serveur et traiter la réponse. Ce script
+				est composé de cinq fonctions dont une anonyme. La fonction anonyme permet d'isoler le code traitant l'action d'un clique
+				sur le bouton du formulaire. Celle-ci envoie le contenu du champ de saisie en attribut de la fonction <code class="codeJS">query(departNumber)</code>.
+				Cette dernière a pour but la construction de la requète en respectant le formalisme du XML-RPC comme vu dans la première partie. Elle
+				transmet ensuite la requète ainsi construite à la fonction <code class="codeJS">sendRequest(messageBody)</code> qui, comme son nom l'indique,
+				s'occupe d'envoyer la requête. Les paramètres nécessaire au protocole XML-RPC sont fixé arbitrairement pour que la requète soit 
+				systématiquement transmise au serveur. La construction de l'objet XMLHttpRequest se fait avec la fonction <span class="codeJS">initXmlHttpRequest()</span>
+				qui s'adapte au navigateur et signale une erreur de compatibilité si celui-ci ne supporte pas l'objet XMLHttpRequest. Enfin la réponse à
+				la requète est directement transmise à la fonction <code class="codeJS">displayResponse(xmlDocumentResponse)</code> qui est chargée de
+				l'intégrer au code xhtml, entre les balises 
+				<code class="codeXML">&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;&lt;/div&gt;</code>.
+			</p>
+			<p>
+				Notons l'intérêt de l'objet XMLHttpRequest puisqu'il permet d'ouvrir une communication avec un serveur distant
+				en respectant le protocole XML-RPC, de vérifier le bon déroulement de la transmission et de récupérer la réponse directement
+				sous la forme d'une application XML. Le fait que la réponse soit un document XML à part entière facilite grandement son traitement
+				par l'utilisation de fonctions internes au javascript telles que <code class="codeJS">getElementsByTagName(tagName)</code>. D'autre
+				part l'affichage de la réponse est effectivement instantané (hormis les délais de transmission, de traitement et d'affichage) et 
+				ne nécessite aucun rafraîchissement de la page.
+			</p>
+			<p>
+				Finalement le code javascript nécessaire au bon fonctionnement de ce client en utilisant le protocole XML-RPC est d'une grande
+				simplicité. Plusieurs amélioration peuvent être envisagées mais elles ne changerons pas fondamentalement l'efficacité de ce code.
+				Le code source complet du client peut-être observer en cliquant sur ce <a href="livrables\client.html">lien</a>.
+			</p>
+			<h2 id="conclusion">Conclusion</h2>
+			<p>
+				XML-RPC n'est pas la seule solution existante pour répondre à la problèmatique de la transmission de données XML. Cependant
+				il reste le moyen le plus simple et le plus répendu. L'utilisation d'autres solutions comme SOAP sont souvent bien trop soffistiqués
+				et ont un intérêt trop spécifique. Cependant XML-RPC est limité par ses spécifications qui manquent de rigueur
+				et peut parfois être inadapté. Le choix du protocole a utiliser sera donc particulier à chaque situation et il est tout à fait
+				envisageable d'utiliser plusieurs solutions pour une même application.
+			</p>
+		</div>
+	</body>
+</html>
