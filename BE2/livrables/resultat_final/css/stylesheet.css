@@ -1,0 +1,41 @@
+.sommaire{
+	position:fixed;
+	left:10px;
+	top:10px;
+	width:15%;
+}
+
+body{
+	width:100%;
+}
+
+.sommaire-title{
+	font-size:20px;
+}
+
+.sommaire-content{
+	width:100%;
+}
+
+.corps{
+	padding-left: 20%;
+	padding-right: 5%;
+	padding-top: 10px;
+	text-align:justify;
+}
+
+table{
+	text-align:center;
+}
+
+th{
+	text-align:center;
+}
+
+td.camembert{
+	background-color:white !important;
+}
+
+td.histogramme{
+	background-color:white !important;
+}

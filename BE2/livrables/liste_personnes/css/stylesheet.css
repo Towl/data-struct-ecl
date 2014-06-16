@@ -1,0 +1,18 @@
+body{
+	width:100%;
+}
+
+.corps{
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 10px;
+	text-align:justify;
+}
+
+table{
+	text-align:center;
+}
+
+th{
+	text-align:center;
+}

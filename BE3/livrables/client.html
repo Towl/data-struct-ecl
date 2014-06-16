@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="authors" content="Franck Coutouly, Jacques Meykiechel"/>
+		<link href="../stylesheets/bootstrap.css" rel="stylesheet"/>
+		<link href="../stylesheets/bootstrap-theme.css" rel="stylesheet"/>
+		<link href="../stylesheets/client.css" rel="stylesheet"/>
+		<title>Client Ajax</title>
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-md-3">
+				<form id="form" class="form-horizontal" action="javascript:;" method="post">
+					<div class="form-group">
+						<div class="col-md-9" style="text-align:right;">
+							<label class="control-label">Numéro de département : </label>
+						</div>
+						<div class="col-md-2">
+							<input id="num" class="pop form-control" type="text" name="numero" style="width:50px;"/>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-1">
+				<button id="sendRequest" type="submit" class="btn btn-primary" form="form">Send</button>
+			</div>
+		</div>
+		<div id="response">
+		</div>
+		<script type="text/javascript">
+			var req = null;
+			var READY_STATE_COMPLETE = 4;
+			
+			function sendRequest(messageBody) {
+				httpMethod = "POST";
+				port = '80';
+				host = 'tic01.tic.ec-lyon.fr'
+				url = 'http://'+host+':'+port+'/~muller/cours/xrpc/server/smart-server.php';
+				if ( req = initXmlHttpRequest() ) {
+					req.onreadystatechange = function() {
+						var state = req.readyState;
+						var data = null;
+						if ( state == READY_STATE_COMPLETE ) {
+							data = req.responseXML;
+						}
+						else {
+							data = "readystate : ["+state+"]\n";
+						}
+						displayResponse(data);
+					};
+					req.open(httpMethod,url,true);
+					req.setRequestHeader("Content-Type","text/xml");
+					req.setRequestHeader("Content-Length",messageBody.length);
+					req.send(messageBody);
+				}
+			}
+			
+			function initXmlHttpRequest() {
+				var requestObject = null;
+				if(window.XMLHttpRequest) // Firefox 
+				   requestObject = new XMLHttpRequest(); 
+				else if(window.ActiveXObject) // Internet Explorer 
+				   requestObject = new ActiveXObject("Microsoft.XMLHTTP"); 
+				else { // XMLHttpRequest non supporté par le navigateur 
+				   alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest..."); 
+				} 
+				return requestObject;
+			}
+			
+			function query(departNumber){
+				var contentRequest = '<?xml version="1.0" encoding="UTF-8"?>'+
+										'<methodCall>'+
+											'<methodName>departement.infos</methodName>'+
+											'<params>'+
+												'<param>'+
+													'<value>'+
+														'<string>'+
+															departNumber+
+														'</string>'+
+													'</value>'+
+												'</param>'+
+											'</params>'+
+										'</methodCall>';
+				sendRequest(contentRequest);
+			}
+			
+			(function() {
+				document.getElementById("sendRequest").onclick = function(){
+					var inputs = document.getElementsByTagName('input');
+					var departNumber = inputs[0].value;
+					query(departNumber);
+				};
+			})();
+			
+			function displayResponse(xmlDocumentResponse) {
+				var members = xmlDocumentResponse.getElementsByTagName("member");
+				var xhtmlResponse = "<h2><u>Infos</u></h2>";
+				for(i_member = 0; i_member < members.length; i_member++){
+					xhtmlResponse = xhtmlResponse + "<h3>" + "<b>" + 
+									members[i_member].getElementsByTagName("name").item(0).textContent + " : " + "</b>" +
+									members[i_member].getElementsByTagName("value").item(0).textContent + "</h3>";
+				}
+				document.getElementById("response").innerHTML = xhtmlResponse;
+			}
+		</script>
+	</body>
+</html>
