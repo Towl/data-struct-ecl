@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0"
 				xmlns="http://www.w3.org/1999/xhtml"
@@ -17,11 +17,11 @@
 	
 	<xsl:template name="fiche_cours">
 		<div class="cours">
-			<h3><xsl:value-of select="@intitulé"/></h3>
+			<h3><xsl:value-of select="@intitulÃ©"/></h3>
 			<xsl:variable name="profID"><xsl:value-of select="@prof"/></xsl:variable>
 			<h4>
 				<xsl:text>Enseignant : </xsl:text>
-				<xsl:value-of select="../personnes/personne[@id = $profID]/prénom"/>
+				<xsl:value-of select="../personnes/personne[@id = $profID]/prÃ©nom"/>
 				<xsl:text> </xsl:text>
 				<xsl:value-of select="//personne[@id = $profID]/nom"/>
 				<xsl:text> </xsl:text>
@@ -46,13 +46,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<xsl:for-each select="étudiant">
+					<xsl:for-each select="Ã©tudiant">
 						<tr>
 							<xsl:call-template name="detail_etudiant">
 								<xsl:with-param name="id" select="@id"/>
 							</xsl:call-template>
 							<xsl:if test="position() = 1">
-								<td class="histogramme" rowspan="{count(../étudiant)}">
+								<td class="histogramme" rowspan="{count(../Ã©tudiant)}">
 									<xsl:call-template name="histo_cours"/>
 								</td>
 							</xsl:if>
@@ -75,7 +75,7 @@
 			<xsl:attribute name="class"><xsl:text>success</xsl:text></xsl:attribute>
 		</xsl:if>
 		<td>
-			<xsl:value-of select="//personne[@id = $id]/prénom"/>
+			<xsl:value-of select="//personne[@id = $id]/prÃ©nom"/>
 			<xsl:text> </xsl:text>
 			<xsl:value-of select="//personne[@id = $id]/nom"/>
 		</td>

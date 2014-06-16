@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 	<xsl:output method="xml"
-				encoding="ISO-8859-1" 
+				encoding="UTF-8" 
 				doctype-public="-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" 
 				doctype-system="http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd" 
 				omit-xml-declaration="no"/>
@@ -40,7 +40,7 @@
 			<div class="panel-content sommaire-content">
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="#liste_personnes">Liste des personnes</a></li>
-					<li><a href="#fiches_etudiants">Fiches des étudiants</a></li>
+					<li><a href="#fiches_etudiants">Fiches des Ã©tudiants</a></li>
 					<li><a href="#fiches_cours">Fiches des cours</a></li>
 				</ul>
 			</div>

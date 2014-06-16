@@ -1,78 +1,78 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <personnes>
- <personne id="P1" civilité="M.">
-  <prénom>Jérôme</prénom>
+ <personne id="P1" civilitÃ©="M.">
+  <prÃ©nom>JÃ©rÃ´me</prÃ©nom>
   <nom>Gourdin</nom>
   <phone>06 54 32 10 98</phone>
   <email>J-Go@freedot.com</email>
-  <adresse>6, impasse des fées</adresse>
+  <adresse>6, impasse des fÃ©es</adresse>
   <ville>Maubeuge</ville>
  </personne>
- <personne id="P2" civilité="M.">
-  <prénom>Raymond</prénom>
+ <personne id="P2" civilitÃ©="M.">
+  <prÃ©nom>Raymond</prÃ©nom>
   <nom>Deubaze</nom>
   <phone>01 02 03 04 05</phone>
   <email>Raymond.Deubaze@ecl1999.ec-lyon.fr</email>
   <adresse>72, avenue des Gobelins</adresse>
   <ville>Malville</ville>
  </personne>
- <personne id="P3" civilité="Mlle">
-  <prénom>Elsa</prénom>
+ <personne id="P3" civilitÃ©="Mlle">
+  <prÃ©nom>Elsa</prÃ©nom>
   <nom>Plique</nom>
   <email>elsa@yahoo.fr</email>
   <adresse>9, rue de l'Arc-en-ciel</adresse>
-  <ville>Vénissieux</ville>
+  <ville>VÃ©nissieux</ville>
  </personne>
- <personne id="P4" civilité="Mme">
-  <prénom>Ginette</prénom>
+ <personne id="P4" civilitÃ©="Mme">
+  <prÃ©nom>Ginette</prÃ©nom>
   <nom>Ringard</nom>
   <phone>04 33 22 11 00</phone>
   <email>gigi@wannadoux.fr</email>
   <adresse>12, rue de la gare</adresse>
   <ville>Trouville</ville>
  </personne>
- <personne id="P5" civilité="M.">
-  <prénom>Jean</prénom>
+ <personne id="P5" civilitÃ©="M.">
+  <prÃ©nom>Jean</prÃ©nom>
   <nom>Aymard</nom>
   <phone>09 64 32 11 08</phone>
   <email>Jeannot@patro.net</email>
   <adresse>2, place du puits</adresse>
   <ville>Villeneuve d'Asq</ville>
  </personne>
- <personne id="P6" civilité="Mlle">
-  <prénom>Sandra</prénom>
+ <personne id="P6" civilitÃ©="Mlle">
+  <prÃ©nom>Sandra</prÃ©nom>
   <nom>Duciel</nom>
   <phone>09 99 99 99 99</phone>
   <email>sandy@sky.net</email>
-  <adresse>1023, montée des nues</adresse>
+  <adresse>1023, montÃ©e des nues</adresse>
   <ville>Mont-Joly</ville>
  </personne>
- <personne id="P7" civilité="M.">
-  <prénom>Jules</prénom>
+ <personne id="P7" civilitÃ©="M.">
+  <prÃ©nom>Jules</prÃ©nom>
   <nom>Dechez</nom>
   <phone>01 23 45 67 89</phone>
   <email>Jules@smith.com</email>
   <adresse>5, avenue des Trolls</adresse>
   <ville>Cours-la-Ville</ville>
  </personne>
- <personne id="P8" civilité="M.">
-  <prénom>Antoine</prénom>
+ <personne id="P8" civilitÃ©="M.">
+  <prÃ©nom>Antoine</prÃ©nom>
   <nom>Nette</nom>
   <phone>08 16 32 64 12</phone>
   <email>tony@orange.net</email>
   <adresse>49, rue de la mare</adresse>
   <ville>Les Rousses</ville>
  </personne>
- <personne id="P9" civilité="Mlle">
-  <prénom>Julie</prénom>
+ <personne id="P9" civilitÃ©="Mlle">
+  <prÃ©nom>Julie</prÃ©nom>
   <nom>Trau</nom>
   <phone>02 49 24 16 12</phone>
   <email>juliette@city.com</email>
-  <adresse>42 bis, rond-point de la libération</adresse>
+  <adresse>42 bis, rond-point de la libÃ©ration</adresse>
   <ville>Marseille</ville>
  </personne>
  <personne id="P10">
-  <prénom>Guy</prénom>
+  <prÃ©nom>Guy</prÃ©nom>
   <nom>Liguili</nom>
   <phone>06 03 99 63 12</phone>
   <email>guy.liguili@telenet.com</email>
@@ -80,11 +80,11 @@
   <ville>Etretat</ville>
  </personne>
  <personne id="P11">
-  <prénom>Jeanne</prénom>
+  <prÃ©nom>Jeanne</prÃ©nom>
   <nom>Doe</nom>
   <phone>01 68 72 11 04</phone>
   <email>jeanne23@mobil-et.net</email>
-  <adresse>49, avenue des alliés</adresse>
+  <adresse>49, avenue des alliÃ©s</adresse>
   <ville>Sarreguemines</ville>
  </personne>
 </personnes>

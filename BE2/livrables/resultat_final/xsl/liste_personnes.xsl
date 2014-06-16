@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 	
@@ -14,9 +14,9 @@
 			<thead>
 				<tr>
 					<th><xsl:text></xsl:text></th>
-					<th><xsl:text>Prénom</xsl:text></th>
+					<th><xsl:text>PrÃ©nom</xsl:text></th>
 					<th><xsl:text>Nom</xsl:text></th>
-					<th><xsl:text>Téléphone</xsl:text></th>
+					<th><xsl:text>TÃ©lÃ©phone</xsl:text></th>
 					<th><xsl:text>email</xsl:text></th>
 					<th><xsl:text>Adresse</xsl:text></th>
 					<th><xsl:text>ville</xsl:text></th>
@@ -32,8 +32,8 @@
 		<tr>
 			<td><a type="button" href="#{@id}" class="btn btn-xs btn-default">v</a></td>
 			<xsl:choose>
-				<xsl:when test="prénom">
-					<td><xsl:apply-templates select="prénom"/></td>
+				<xsl:when test="prÃ©nom">
+					<td><xsl:apply-templates select="prÃ©nom"/></td>
 				</xsl:when>
 				<xsl:otherwise>
 					<td><xsl:text> </xsl:text></td>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0"
 				xmlns="http://www.w3.org/1999/xhtml"
 				xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
-	<xsl:variable name="CoriginX">0</xsl:variable><!-- Coordonnée X de l'origine du dessin SVG -->
-	<xsl:variable name="CoriginY">0</xsl:variable><!-- Coordonnée Y de l'origine du dessin SVG -->
+	<xsl:variable name="CoriginX">0</xsl:variable><!-- CoordonnÃ©e X de l'origine du dessin SVG -->
+	<xsl:variable name="CoriginY">0</xsl:variable><!-- CoordonnÃ©e Y de l'origine du dessin SVG -->
 	<xsl:variable name="Cwidth">300</xsl:variable><!-- Largeur du dessin SVG -->
 	<xsl:variable name="Cheight">300</xsl:variable><!-- Hauteur du dessin SVG -->
 
@@ -13,11 +13,11 @@
 	<xsl:variable name="centreCamembertY"><xsl:value-of select="$Cheight div 2"/></xsl:variable>
 	<xsl:variable name="rayonCamembert">100</xsl:variable>
 	
-	<!-- Template à appeller une seule fois avant la création du premier camembert.
-	setPath(...) est la fonction javascript utilisé pour calculer les angles des parts de camembert.
-		avec :  -idPath l'id de la balise <path/> correspondant à la part de camembert,
-				-angle l'angle décrit par la part de camembert en radian
-				-isLargeArc vaut 1 si l'arc à dessiner est plus long que la moitié du périmetre du cercle complet sinon vaut 0-->
+	<!-- Template Ã  appeller une seule fois avant la crÃ©ation du premier camembert.
+	setPath(...) est la fonction javascript utilisÃ© pour calculer les angles des parts de camembert.
+		avec :  -idPath l'id de la balise <path/> correspondant Ã  la part de camembert,
+				-angle l'angle dÃ©crit par la part de camembert en radian
+				-isLargeArc vaut 1 si l'arc Ã  dessiner est plus long que la moitiÃ© du pÃ©rimetre du cercle complet sinon vaut 0-->
 	<xsl:template name="javascriptInitCamembert">
 		<script type="text/javascript">
 			function setPath(idPath,angle,isLargeArc){
@@ -30,12 +30,12 @@
 	
 	<xsl:template name="camembert">
 		<xsl:param name="id"/>
-		<xsl:variable name="nbCoursInscr"><xsl:value-of select="count(../../cours/étudiant[@id = $id])"/></xsl:variable>
+		<xsl:variable name="nbCoursInscr"><xsl:value-of select="count(../../cours/Ã©tudiant[@id = $id])"/></xsl:variable>
 		<xsl:variable name="notemoy">
-			<xsl:value-of select="sum(../../cours/étudiant[@id = $id]/note) div count(../../cours/étudiant[@id = $id]/note)"/>
+			<xsl:value-of select="sum(../../cours/Ã©tudiant[@id = $id]/note) div count(../../cours/Ã©tudiant[@id = $id]/note)"/>
 		</xsl:variable>
 		<svg:svg xmlns:svg="http://www.w3.org/2000/svg" width="{$Cwidth}" height="{$Cheight}" version="1.1">		
-			<xsl:for-each select="../../cours/étudiant[@id = $id]/note">
+			<xsl:for-each select="../../cours/Ã©tudiant[@id = $id]/note">
 				<xsl:variable name="uInt8Max">255</xsl:variable>
 				<xsl:variable name="color">
 					<xsl:text>rgb(</xsl:text>
@@ -48,7 +48,7 @@
 				</xsl:variable>
 				<xsl:variable name="positCours"><xsl:value-of select="count(../../preceding-sibling::cours) + 1"/></xsl:variable>
 				<xsl:variable name="negatePercent">
-					<xsl:value-of select="(sum(../../../cours[position() &lt; $positCours]/étudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"/>
+					<xsl:value-of select="(sum(../../../cours[position() &lt; $positCours]/Ã©tudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"/>
 				</xsl:variable>
 				<xsl:if test="$negatePercent &gt; 0">
 					<xsl:variable name="idPath"><xsl:value-of select="concat('path',count(preceding::*))"/></xsl:variable>
@@ -59,10 +59,10 @@
 				</xsl:if>
 			</xsl:for-each>
 		</svg:svg>
-		<xsl:for-each select="../../cours/étudiant[@id = $id]/note">
+		<xsl:for-each select="../../cours/Ã©tudiant[@id = $id]/note">
 			<xsl:variable name="positCours"><xsl:value-of select="count(../../preceding-sibling::cours) + 1"/></xsl:variable>
 			<xsl:variable name="negatePercent">
-				<xsl:value-of select="(sum(../../../cours[position() &lt; $positCours]/étudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"/>
+				<xsl:value-of select="(sum(../../../cours[position() &lt; $positCours]/Ã©tudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"/>
 			</xsl:variable>
 			<xsl:if test="$negatePercent &gt; 0">
 					<xsl:call-template name="setPath">

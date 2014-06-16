@@ -1,80 +1,80 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet href="xsl/main_fiches_cours.xsl" type="text/xsl"?>
 <option>
 <personnes>
- <personne id="P1" civilit�="M.">
-  <pr�nom>J�r�me</pr�nom>
+ <personne id="P1" civilitÃ©="M.">
+  <prÃ©nom>JÃ©rÃ´me</prÃ©nom>
   <nom>Gourdin</nom>
   <phone>06 54 32 10 98</phone>
   <email>J-Go@freedot.com</email>
-  <adresse>6, impasse des f�es</adresse>
+  <adresse>6, impasse des fÃ©es</adresse>
   <ville>Maubeuge</ville>
  </personne>
- <personne id="P2" civilit�="M.">
-  <pr�nom>Raymond</pr�nom>
+ <personne id="P2" civilitÃ©="M.">
+  <prÃ©nom>Raymond</prÃ©nom>
   <nom>Deubaze</nom>
   <phone>01 02 03 04 05</phone>
   <email>Raymond.Deubaze@ecl1999.ec-lyon.fr</email>
   <adresse>72, avenue des Gobelins</adresse>
   <ville>Malville</ville>
  </personne>
- <personne id="P3" civilit�="Mlle">
-  <pr�nom>Elsa</pr�nom>
+ <personne id="P3" civilitÃ©="Mlle">
+  <prÃ©nom>Elsa</prÃ©nom>
   <nom>Plique</nom>
   <email>elsa@yahoo.fr</email>
   <adresse>9, rue de l'Arc-en-ciel</adresse>
-  <ville>V�nissieux</ville>
+  <ville>VÃ©nissieux</ville>
  </personne>
- <personne id="P4" civilit�="Mme">
-  <pr�nom>Ginette</pr�nom>
+ <personne id="P4" civilitÃ©="Mme">
+  <prÃ©nom>Ginette</prÃ©nom>
   <nom>Ringard</nom>
   <phone>04 33 22 11 00</phone>
   <email>gigi@wannadoux.fr</email>
   <adresse>12, rue de la gare</adresse>
   <ville>Trouville</ville>
  </personne>
- <personne id="P5" civilit�="M.">
-  <pr�nom>Jean</pr�nom>
+ <personne id="P5" civilitÃ©="M.">
+  <prÃ©nom>Jean</prÃ©nom>
   <nom>Aymard</nom>
   <phone>09 64 32 11 08</phone>
   <email>Jeannot@patro.net</email>
   <adresse>2, place du puits</adresse>
   <ville>Villeneuve d'Asq</ville>
  </personne>
- <personne id="P6" civilit�="Mlle">
-  <pr�nom>Sandra</pr�nom>
+ <personne id="P6" civilitÃ©="Mlle">
+  <prÃ©nom>Sandra</prÃ©nom>
   <nom>Duciel</nom>
   <phone>09 99 99 99 99</phone>
   <email>sandy@sky.net</email>
-  <adresse>1023, mont�e des nues</adresse>
+  <adresse>1023, montÃ©e des nues</adresse>
   <ville>Mont-Joly</ville>
  </personne>
- <personne id="P7" civilit�="M.">
-  <pr�nom>Jules</pr�nom>
+ <personne id="P7" civilitÃ©="M.">
+  <prÃ©nom>Jules</prÃ©nom>
   <nom>Dechez</nom>
   <phone>01 23 45 67 89</phone>
   <email>Jules@smith.com</email>
   <adresse>5, avenue des Trolls</adresse>
   <ville>Cours-la-Ville</ville>
  </personne>
- <personne id="P8" civilit�="M.">
-  <pr�nom>Antoine</pr�nom>
+ <personne id="P8" civilitÃ©="M.">
+  <prÃ©nom>Antoine</prÃ©nom>
   <nom>Nette</nom>
   <phone>08 16 32 64 12</phone>
   <email>tony@orange.net</email>
   <adresse>49, rue de la mare</adresse>
   <ville>Les Rousses</ville>
  </personne>
- <personne id="P9" civilit�="Mlle">
-  <pr�nom>Julie</pr�nom>
+ <personne id="P9" civilitÃ©="Mlle">
+  <prÃ©nom>Julie</prÃ©nom>
   <nom>Trau</nom>
   <phone>02 49 24 16 12</phone>
   <email>juliette@city.com</email>
-  <adresse>42 bis, rond-point de la lib�ration</adresse>
+  <adresse>42 bis, rond-point de la libÃ©ration</adresse>
   <ville>Marseille</ville>
  </personne>
  <personne id="P10">
-  <pr�nom>Guy</pr�nom>
+  <prÃ©nom>Guy</prÃ©nom>
   <nom>Liguili</nom>
   <phone>06 03 99 63 12</phone>
   <email>guy.liguili@telenet.com</email>
@@ -82,71 +82,71 @@
   <ville>Etretat</ville>
  </personne>
  <personne id="P11">
-  <pr�nom>Jeanne</pr�nom>
+  <prÃ©nom>Jeanne</prÃ©nom>
   <nom>Doe</nom>
   <phone>01 68 72 11 04</phone>
   <email>jeanne23@mobil-et.net</email>
-  <adresse>49, avenue des alli�s</adresse>
+  <adresse>49, avenue des alliÃ©s</adresse>
   <ville>Sarreguemines</ville>
  </personne>
 </personnes>
-<cours intitul�="Technologies de validation" prof="P1">
- <�tudiant id="P4">
+<cours intitulÃ©="Technologies de validation" prof="P1">
+ <Ã©tudiant id="P4">
   <note>12.5</note>
   <absences>1</absences>
-  <comment>Devrait se mettre � jour</comment>
- </�tudiant>
- <�tudiant id="P3">
+  <comment>Devrait se mettre Ã  jour</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P3">
   <note>16.7</note>
   <absences>0</absences>
-  <comment>Excellent �l�ment</comment>
- </�tudiant>
- <�tudiant id="P8">
+  <comment>Excellent Ã©lÃ©ment</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P8">
   <note>12.0</note>
   <absences>2</absences>
   <comment>Trop souvent dans les nuages</comment>
- </�tudiant>
- <�tudiant id="P10">
+ </Ã©tudiant>
+ <Ã©tudiant id="P10">
   <note>10.0</note>
   <absences>3</absences>
-  <comment>Trop dissip�</comment>
- </�tudiant>
- <�tudiant id="P5">
+  <comment>Trop dissipÃ©</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P5">
   <note>8.3</note>
   <absences>0</absences>
   <comment>Fait des efforts, mais doit progresser</comment>
- </�tudiant>
+ </Ã©tudiant>
 </cours>
-<cours intitul�="XML Schema" prof="P6">
- <�tudiant id="P2">
+<cours intitulÃ©="XML Schema" prof="P6">
+ <Ã©tudiant id="P2">
   <note>11.3</note>
   <absences>2</absences>
   <comment>Peut mieux faire</comment>
- </�tudiant>
- <�tudiant id="P11">
+ </Ã©tudiant>
+ <Ã©tudiant id="P11">
   <note>12.1</note>
   <absences>0</absences>
   <comment>Un peu perdue</comment>
- </�tudiant>
- <�tudiant id="P9">
+ </Ã©tudiant>
+ <Ã©tudiant id="P9">
   <note>14.0</note>
   <absences>0</absences>
   <comment>Le mieux est l'ennemi du bien</comment>
- </�tudiant>
- <�tudiant id="P4">
+ </Ã©tudiant>
+ <Ã©tudiant id="P4">
   <note>12.0</note>
   <absences>2</absences>
   <comment>Manque de recul</comment>
- </�tudiant>
- <�tudiant id="P8">
+ </Ã©tudiant>
+ <Ã©tudiant id="P8">
   <note>11.0</note>
   <absences>3</absences>
   <comment>Semble absent</comment>
- </�tudiant>
- <�tudiant id="P3">
+ </Ã©tudiant>
+ <Ã©tudiant id="P3">
   <note>17</note>
   <absences>0</absences>
-  <comment>Bon r�sultats</comment>
- </�tudiant>
+  <comment>Bon rÃ©sultats</comment>
+ </Ã©tudiant>
 </cours>
 </option>

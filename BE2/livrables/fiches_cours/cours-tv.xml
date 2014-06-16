@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<cours intitul�="Technologies de validation" prof="P1">
- <�tudiant id="P4">
+<?xml version="1.0" encoding="UTF-8"?>
+<cours intitulÃ©="Technologies de validation" prof="P1">
+ <Ã©tudiant id="P4">
   <note>12.5</note>
   <absences>1</absences>
-  <comment>Devrait se mettre � jour</comment>
- </�tudiant>
- <�tudiant id="P3">
+  <comment>Devrait se mettre Ã  jour</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P3">
   <note>16.7</note>
   <absences>0</absences>
-  <comment>Excellent �l�ment</comment>
- </�tudiant>
- <�tudiant id="P8">
+  <comment>Excellent Ã©lÃ©ment</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P8">
   <note>12.0</note>
   <absences>2</absences>
   <comment>Trop souvent dans les nuages</comment>
- </�tudiant>
- <�tudiant id="P10">
+ </Ã©tudiant>
+ <Ã©tudiant id="P10">
   <note>10.0</note>
   <absences>3</absences>
-  <comment>Trop dissip�</comment>
- </�tudiant>
- <�tudiant id="P5">
+  <comment>Trop dissipÃ©</comment>
+ </Ã©tudiant>
+ <Ã©tudiant id="P5">
   <note>8.3</note>
   <absences>0</absences>
   <comment>Fait des efforts, mais doit progresser</comment>
- </�tudiant>
+ </Ã©tudiant>
 </cours>

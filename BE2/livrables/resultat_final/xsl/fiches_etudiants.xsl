@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0"
 				xmlns="http://www.w3.org/1999/xhtml"
@@ -9,7 +9,7 @@
 	<xsl:template name="fiches_etudiants">
 		<div class="fiches_etudiants">
 			<xsl:call-template name="javascriptInitCamembert"/>
-			<h2 id="fiches_etudiants">Fiches des étudiants</h2>
+			<h2 id="fiches_etudiants">Fiches des Ã©tudiants</h2>
 			<xsl:for-each select="//personne">
 				<xsl:call-template name="fiche_etudiant">
 					<xsl:with-param name="id" select="@id"/>
@@ -20,12 +20,12 @@
 	
 	<xsl:template name="fiche_etudiant">
 		<xsl:param name="id"/>
-		<xsl:if test="//étudiant[@id = $id]">
+		<xsl:if test="//Ã©tudiant[@id = $id]">
 			<xsl:variable name="notemoy">
-				<xsl:value-of select="sum(../../cours/étudiant[@id = $id]/note) div count(../../cours/étudiant[@id = $id]/note)"/>
+				<xsl:value-of select="sum(../../cours/Ã©tudiant[@id = $id]/note) div count(../../cours/Ã©tudiant[@id = $id]/note)"/>
 			</xsl:variable>
 			<h3 id="{@id}">
-				<xsl:value-of select="prénom"/>
+				<xsl:value-of select="prÃ©nom"/>
 				<xsl:text> </xsl:text>
 				<xsl:value-of select="nom"/>
 			</h3>
@@ -39,16 +39,16 @@
 						<th>Cours</th>
 						<th>Note</th>
 						<th>Absences</th>
-						<th>Appréciation</th>
+						<th>ApprÃ©ciation</th>
 						<th>Participation</th>
 						<th>Legende</th>
 						<th>Camembert</th>
 					</tr>
 				</thead>
 				<tbody>
-					<xsl:for-each select="//étudiant[@id = $id]">
+					<xsl:for-each select="//Ã©tudiant[@id = $id]">
 						<tr>
-							<xsl:variable name="nbCoursInscr"><xsl:value-of select="count(../../cours/étudiant[@id = $id])"/></xsl:variable>
+							<xsl:variable name="nbCoursInscr"><xsl:value-of select="count(../../cours/Ã©tudiant[@id = $id])"/></xsl:variable>
 							<xsl:if test="note&lt;10">
 							<xsl:attribute name="class"><xsl:text>danger</xsl:text></xsl:attribute>
 							</xsl:if>
@@ -58,7 +58,7 @@
 							<xsl:if test="note&gt;=15">
 								<xsl:attribute name="class"><xsl:text>success</xsl:text></xsl:attribute>
 							</xsl:if>
-							<td><xsl:value-of select="../@intitulé"/></td>
+							<td><xsl:value-of select="../@intitulÃ©"/></td>
 							<td><xsl:value-of select="note"/></td>
 							<td><xsl:value-of select="absences"/></td>
 							<td><xsl:value-of select="comment"/></td>
