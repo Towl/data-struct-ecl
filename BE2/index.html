@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="authors" content="Franck Coutouly, Jacques Meykiechel"/>
 		<link href="stylesheets/bootstrap.css" rel="stylesheet"/>
 		<link href="stylesheets/bootstrap-theme.css" rel="stylesheet"/>
 		<link href="stylesheets/index.css" rel="stylesheet"/>
-		<title>Représentation et manipulation de données structurées -€“ BE2</title>
+		<title>ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es -Â€Â“ BE2</title>
 	</head>
 	<body>
 		<div class="panel panel-default sommaire">
@@ -21,14 +21,14 @@
 						<ul class="nav subnav">
 							<li><a href="#DTD">I.a. Type de document</a></li>
 							<li><a href="#balisehtml">I.b. Balise HTML</a></li>
-							<li><a href="#entete">I.c. L'entête</a></li>
+							<li><a href="#entete">I.c. L'entÃªte</a></li>
 						</ul>
 					</li>
 					<li><a href="#personnes">II. Liste des personnes</a></li>
 					<li>
 						<a href="#fiches">III. Construction de fiches</a>
 						<ul class="nav subnav">
-							<li><a href="#etudiants">III.a. Fiches des étudiants</a></li>
+							<li><a href="#etudiants">III.a. Fiches des Ã©tudiants</a></li>
 							<li><a href="#cours">III.b. Fiches des cours</a></li>
 						</ul>
 					</li>
@@ -60,7 +60,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>Fiches étudiants</th>
+							<th>Fiches Ã©tudiants</th>
 							<td>
 								<a href="livrables\fiches_etudiants\xsl\main_fiches_etudiants.xsl" class="btn btn-default btn-xs">XSLT</a>
 								<a href="livrables\fiches_etudiants\option_collapsed.xml" class="btn btn-default btn-xs">XML</a>
@@ -76,7 +76,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>Résultat final</th>
+							<th>RÃ©sultat final</th>
 							<td>
 								<a href="livrables\resultat_final\xsl\main_final.xsl" class="btn btn-default btn-xs">XSLT</a>
 								<a href="livrables\resultat_final\option_collapsed.xml" class="btn btn-default btn-xs">XML</a>
@@ -89,61 +89,61 @@
 		</div>
 		<div class="corps">
 		<h1 id="titre">Toute une option</h1>
-		<h4>Représentation et manipulation de données structurées - BE2</h4>
+		<h4>ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es - BE2</h4>
 		<p>
-			Le présent document décrit le travail réalisé au cours du second bureau d'étude
-			du module ouvert disciplinaire "Représentation et manipulation de données structurées",
+			Le prÃ©sent document dÃ©crit le travail rÃ©alisÃ© au cours du second bureau d'Ã©tude
+			du module ouvert disciplinaire "ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es",
 			par la colaboration de Jacques Meykiechel et Franck Coutouly (groupe 5).
 		</p>
 		<h3>Note pour les livrables</h3>
 		<p>
-			L'encadré fixe en haut à droite contient la liste des livrables demandés par le bureau d'étude. Ils sont triés par partie et chaque
-			bouton est un lien vers le fichier correspondant. Les fichies XML sont les applications d'origines (option.xml) dont les entités
-			ont été introduites manuellement pour une meilleurs compatibilité avec les navigateurs internet. Ces fichiers sont associés avec
-			la feuille de style XSLT correspondante. Les boutons XSLT sont les feuilles de style elles-même. Elles ont été construites de façon
-			modulaire pour une meilleurs lisibilité et pour éviter les répétitions. Ainsi le bouton XSLT est un lien vers la feuille principale,
-			celle-ci possédera des inclusions accéssibles depuis le code source.
-			Enfin les boutons XHTML sont les documents résultants de la transformation XSL. Ils ont été construit pour faciliter la validation par le
-			W3C et observer directement le résultat obtenu par ces transformation. Ces fichiers ont été obtenu à l'aide de l'API java Xalan d'Apache.
+			L'encadrÃ© fixe en haut Ã  droite contient la liste des livrables demandÃ©s par le bureau d'Ã©tude. Ils sont triÃ©s par partie et chaque
+			bouton est un lien vers le fichier correspondant. Les fichies XML sont les applications d'origines (option.xml) dont les entitÃ©s
+			ont Ã©tÃ© introduites manuellement pour une meilleurs compatibilitÃ© avec les navigateurs internet. Ces fichiers sont associÃ©s avec
+			la feuille de style XSLT correspondante. Les boutons XSLT sont les feuilles de style elles-mÃªme. Elles ont Ã©tÃ© construites de faÃ§on
+			modulaire pour une meilleurs lisibilitÃ© et pour Ã©viter les rÃ©pÃ©titions. Ainsi le bouton XSLT est un lien vers la feuille principale,
+			celle-ci possÃ©dera des inclusions accÃ©ssibles depuis le code source.
+			Enfin les boutons XHTML sont les documents rÃ©sultants de la transformation XSL. Ils ont Ã©tÃ© construit pour faciliter la validation par le
+			W3C et observer directement le rÃ©sultat obtenu par ces transformation. Ces fichiers ont Ã©tÃ© obtenu Ã  l'aide de l'API java Xalan d'Apache.
 		</p>
 		<h2 id="introduction">Introduction</h2>
 		<p>
-			Le premier bureau d'étude a démontré les limites du langage CSS pour mettre en forme le contenu d'une application XML. Ce
-			second bureau d'étude se concentrera sur l'intérêt du XSLT pour palier les défauts du CSS. La progression de ce travail
-			est successive, en commençant par la présentation d'une liste de personne comme il est possible de le faire avec le CSS et en
-			y ajoutant des hyperliens. Suivi de la présentation des fiches de notes de chaque étudiant et des fiches de cours qui nécessiteront
+			Le premier bureau d'Ã©tude a dÃ©montrÃ© les limites du langage CSS pour mettre en forme le contenu d'une application XML. Ce
+			second bureau d'Ã©tude se concentrera sur l'intÃ©rÃªt du XSLT pour palier les dÃ©fauts du CSS. La progression de ce travail
+			est successive, en commenÃ§ant par la prÃ©sentation d'une liste de personne comme il est possible de le faire avec le CSS et en
+			y ajoutant des hyperliens. Suivi de la prÃ©sentation des fiches de notes de chaque Ã©tudiant et des fiches de cours qui nÃ©cessiteront
 			une exploitation des IDs. 
-			Enfin les données seront utilisé pour construire des diagrammes en exploitant les possibilités offertes par le SVG.
+			Enfin les donnÃ©es seront utilisÃ© pour construire des diagrammes en exploitant les possibilitÃ©s offertes par le SVG.
 		</p>
 		<h2 id="xhtml">I. Output XHTML</h2>
 		<p>
-			Toutes les feuilles de style XSLT qui devront être réalisées durant ce bureau d'étude doivent permettre aux documents d'origines
-			d'être convertis en document XHTML. Ceux-ci devront être validés par le W3C. C'est pourquoi la première partie de ce rapport se 
-			concentre sur la construction d'un document XHTML minimal à partir de n'importe quel application XML d'origine à l'aide d'une feuille
+			Toutes les feuilles de style XSLT qui devront Ãªtre rÃ©alisÃ©es durant ce bureau d'Ã©tude doivent permettre aux documents d'origines
+			d'Ãªtre convertis en document XHTML. Ceux-ci devront Ãªtre validÃ©s par le W3C. C'est pourquoi la premiÃ¨re partie de ce rapport se 
+			concentre sur la construction d'un document XHTML minimal Ã  partir de n'importe quel application XML d'origine Ã  l'aide d'une feuille
 			de style XSLT.
 		</p>
-		<h3 id="DTD">I.a. La définition du type de document</h3>
+		<h3 id="DTD">I.a. La dÃ©finition du type de document</h3>
 		<p>
-			La première chose que la feuille de style XSLT doit réaliser est le formattage du document final au format XHTML. 
-			Le XSLT propose une balise <code class="codeXML element">&lt;xsl:output/&gt;</code> qui permet de définir certaines 
-			caractéristique du document résultant de la transformation.
+			La premiÃ¨re chose que la feuille de style XSLT doit rÃ©aliser est le formattage du document final au format XHTML. 
+			Le XSLT propose une balise <code class="codeXML element">&lt;xsl:output/&gt;</code> qui permet de dÃ©finir certaines 
+			caractÃ©ristique du document rÃ©sultant de la transformation.
 			L'attribut <code class="codeXML attribut">method</code> admet nottamment la valeur <code class="codeXML valeur">"html"</code> 
-			pour obtenir un fichier HTML, cependant celui ne respectera pas	les spécification du doctype XHTML strict (nom de balise en majuscule, 
-			balise vide non fermée, etc...). 
-			La solution est donc de choisir la valeur <code class="codeXML valeur">"xml"</code> et de préciser le doctype du document 
-			XML résultant, les attributs <code class="codeXML attribut">doctype-public</code> et 
+			pour obtenir un fichier HTML, cependant celui ne respectera pas	les spÃ©cification du doctype XHTML strict (nom de balise en majuscule, 
+			balise vide non fermÃ©e, etc...). 
+			La solution est donc de choisir la valeur <code class="codeXML valeur">"xml"</code> et de prÃ©ciser le doctype du document 
+			XML rÃ©sultant, les attributs <code class="codeXML attribut">doctype-public</code> et 
 			<code class="codeXML attribut">doctype-system</code> de la balise <code class="codeXML element">&lt;xsl:output/&gt;</code> sont 
-			prévus à cet effet. 
-			Enfin si les choses restent telles quelles le document résultant contient en première ligne l'instruction de traitement correspondant
-			à la déclaration XML, hors les navigateurs conscidérerons le contenu qui suit comme du XML pur. 
-			Pour y remédier la balise <code class="codeXML element">&lt;xsl:output/&gt;</code> possède un attribut 
-			<code class="codeXML attribut">omit-xml-declaration</code> qui, comme son nom l'indique, permet de ne pas inclure la déclaration 
-			XML dans le document de sortie en mettant l'attribut à la valeur <code class="codeXML valeur">"no"</code>.
+			prÃ©vus Ã  cet effet. 
+			Enfin si les choses restent telles quelles le document rÃ©sultant contient en premiÃ¨re ligne l'instruction de traitement correspondant
+			Ã  la dÃ©claration XML, hors les navigateurs conscidÃ©rerons le contenu qui suit comme du XML pur. 
+			Pour y remÃ©dier la balise <code class="codeXML element">&lt;xsl:output/&gt;</code> possÃ¨de un attribut 
+			<code class="codeXML attribut">omit-xml-declaration</code> qui, comme son nom l'indique, permet de ne pas inclure la dÃ©claration 
+			XML dans le document de sortie en mettant l'attribut Ã  la valeur <code class="codeXML valeur">"no"</code>.
 		</p>
 		<h3 id="balisehtml">I.b. La balise html</h3>
 		<p>
-			A partir de là le document résultant ne contient qu'une ligne spécifiant le doctype. L'étape suivante est de définir la balise
-			englobant le contenu du fichier. Le format de sortie désiré étant le XHTML, son contenu devra être inclu entre les balises
+			A partir de lÃ  le document rÃ©sultant ne contient qu'une ligne spÃ©cifiant le doctype. L'Ã©tape suivante est de dÃ©finir la balise
+			englobant le contenu du fichier. Le format de sortie dÃ©sirÃ© Ã©tant le XHTML, son contenu devra Ãªtre inclu entre les balises
 			<code class="codeXML balise">&lt;html
 				<span class="attribut">xmlns<span class="contenuTexte">=</span><span class="valeur">"http://www.w3.org/1999/xhtml"</span></span>&gt;
 			    <span class="codeXML balise">&lt;/html&gt;</span>
@@ -186,39 +186,39 @@
 				</div>
 			</div>
 		<p class="note">
-			La valeur de l'attribut <code class="codeXML attribut">match</code> aurait pu être 
+			La valeur de l'attribut <code class="codeXML attribut">match</code> aurait pu Ãªtre 
 			<code class="codeXML valeur">"/option"</code> puisque la balise racine de l'application option.xml est 
 			<code class="codeXML">&lt;option&gt;</code>.
 		</p>
 		<p>
-			A priori ce code fonctionne et le résultat obtenu est satisfaisant. 
-			Malheureusement une subtilité du language XML et XSLT fait que ce code produira un document qui ne sera pas un XHTML valide 
+			A priori ce code fonctionne et le rÃ©sultat obtenu est satisfaisant. 
+			Malheureusement une subtilitÃ© du language XML et XSLT fait que ce code produira un document qui ne sera pas un XHTML valide 
 			par la suite. 
-			La feuille de style XSLT étant également une application XML, elle est sensible au espace de nom ce qui signifie que l'attribut 
-			<code class="codeXML attribut">xmlns</code> de la balise <code class="codeXML">&lt;html&gt;</code> sera interprété. 
-			Ceci implique que la feuille de style appliquera l'espace de nom indiqué par cet attribut à toutes les balises se 
+			La feuille de style XSLT Ã©tant Ã©galement une application XML, elle est sensible au espace de nom ce qui signifie que l'attribut 
+			<code class="codeXML attribut">xmlns</code> de la balise <code class="codeXML">&lt;html&gt;</code> sera interprÃ©tÃ©. 
+			Ceci implique que la feuille de style appliquera l'espace de nom indiquÃ© par cet attribut Ã  toutes les balises se 
 			trouvant entre les balises <code class="codeXML">&lt;html&gt;</code>. 
-			Hors la déclaration des templates définissant les transformations des éléments suivant ne se trouve pas dans les balises 
+			Hors la dÃ©claration des templates dÃ©finissant les transformations des Ã©lÃ©ments suivant ne se trouve pas dans les balises 
 			<code class="codeXML">&lt;html&gt;</code>. 
-			Ce qui signifie que toutes les balises ajoutées par la feuille de style XSLT qui n'ont pas été déclarées dans le template
-			principal seront considérées avec l'espace de nom par défaut. 
-			Deux solutions sont envisageable pour résoudre ce problème. 
-			Premièrement la feuille de style pourrait être conçue de manière entièrement procédurale. 
-			Cette solution est tout fait réalisable pour une application de	petite taille. 
-			Elle deviendra trop compliquée à mettre en oeuvre lorsque la feuille de style prendra du volume et le résultat sera ilisible. 
-			Deuxièmement la déclaration	de l'espace de nom pourrait être placée en attribut de la balise 
+			Ce qui signifie que toutes les balises ajoutÃ©es par la feuille de style XSLT qui n'ont pas Ã©tÃ© dÃ©clarÃ©es dans le template
+			principal seront considÃ©rÃ©es avec l'espace de nom par dÃ©faut. 
+			Deux solutions sont envisageable pour rÃ©soudre ce problÃ¨me. 
+			PremiÃ¨rement la feuille de style pourrait Ãªtre conÃ§ue de maniÃ¨re entiÃ¨rement procÃ©durale. 
+			Cette solution est tout fait rÃ©alisable pour une application de	petite taille. 
+			Elle deviendra trop compliquÃ©e Ã  mettre en oeuvre lorsque la feuille de style prendra du volume et le rÃ©sultat sera ilisible. 
+			DeuxiÃ¨mement la dÃ©claration	de l'espace de nom pourrait Ãªtre placÃ©e en attribut de la balise 
 			<code class="codeXML">&lt;xsl:stylesheet&gt;</code>. 
-			Ceci indiquera au parseur XSLT que toute les balises sans URI seront considérées comme étant des balise xhtml. 
-			Cette solution à l'avantage d'être facile à mettre en oeuvre, il ne faudra pas oublier d'ajouter cet attribut à toutes 
-			les feuilles de style XSLT qui seront utilisées par la suite.
+			Ceci indiquera au parseur XSLT que toute les balises sans URI seront considÃ©rÃ©es comme Ã©tant des balise xhtml. 
+			Cette solution Ã  l'avantage d'Ãªtre facile Ã  mettre en oeuvre, il ne faudra pas oublier d'ajouter cet attribut Ã  toutes 
+			les feuilles de style XSLT qui seront utilisÃ©es par la suite.
 		</p>
-		<h3 id="entete">I.c. L'entête</h3>
+		<h3 id="entete">I.c. L'entÃªte</h3>
 		<p>
-			Enfin pour que le document résultant de la transformation XSLT soit parfaitement définit il faut ajouter la partie 
-			<code class="codeXML">&lt;head&gt;</code> comprenant les liens vers les différentes feuilles de style CSS,
-			les informations sur les auteurs et d'autre caractéristiques typiques qui ne seront pas suceptibles d'être modifiées par
+			Enfin pour que le document rÃ©sultant de la transformation XSLT soit parfaitement dÃ©finit il faut ajouter la partie 
+			<code class="codeXML">&lt;head&gt;</code> comprenant les liens vers les diffÃ©rentes feuilles de style CSS,
+			les informations sur les auteurs et d'autre caractÃ©ristiques typiques qui ne seront pas suceptibles d'Ãªtre modifiÃ©es par
 			le contenu du fichier XML source.
-			Pour ce faire, la composition d'un template nommé semble être la manière la plus pertinente de complêter la feuille de style XSLT. 
+			Pour ce faire, la composition d'un template nommÃ© semble Ãªtre la maniÃ¨re la plus pertinente de complÃªter la feuille de style XSLT. 
 		</p>
 			<div class="panel panel-default code-panel">
 				<div class="panel-heading">
@@ -265,24 +265,24 @@
 				</div>
 			</div>
 		<p>
-			Cette feuille de style permet donc de créer un fichier XHTML avec une entête et place le reste du contenu de l'application XML source
-			entre les balises <code class="codeXML">&lt;body&gt;&lt;/body&gt;</code>. Les feuilles de style qui seront étudier par la suite
+			Cette feuille de style permet donc de crÃ©er un fichier XHTML avec une entÃªte et place le reste du contenu de l'application XML source
+			entre les balises <code class="codeXML">&lt;body&gt;&lt;/body&gt;</code>. Les feuilles de style qui seront Ã©tudier par la suite
 			seront incluses par celle-ci.
 		</p>
 		<h2 id="personnes">II. Liste des personnes</h2>
 		<p>
-			Le document option.xml comporte une entité personnes.xml qui contient une liste de <code class="codeXML">&lt;personne&gt;</code>, chacune
-			possèdant un élément <code class="codeXML">&lt;prénom&gt;</code>, <code class="codeXML">&lt;nom&gt;</code>, <code class="codeXML">&lt;phone&gt;</code>,
+			Le document option.xml comporte une entitÃ© personnes.xml qui contient une liste de <code class="codeXML">&lt;personne&gt;</code>, chacune
+			possÃ¨dant un Ã©lÃ©ment <code class="codeXML">&lt;prÃ©nom&gt;</code>, <code class="codeXML">&lt;nom&gt;</code>, <code class="codeXML">&lt;phone&gt;</code>,
 			<code class="codeXML">&lt;email&gt;</code>, <code class="codeXML">&lt;adresse&gt;</code> et <code class="codeXML">&lt;ville&gt;</code>. 
-			Il est souhaité d'afficher cette liste de personnes sous forme de tableau. 
+			Il est souhaitÃ© d'afficher cette liste de personnes sous forme de tableau. 
 			Un template avec l'attribut <code class="codeXML attribut">match</code> ayant pour valeur <code class="codeXML valeur">personne</code> 
 			permettra de construire l'ensemble des lignes du tableau (une ligne par personne).
-			Ce template sera appelé par un élément <code class="codeXML">&lt;xsl:apply-template&gt;</code> avec l'attribut <code class="codeXML attribut">select</code>
-			restreint à la valeur <code class="codeXML valeur">//personnes</code>. Ceci permettra de n'appliquer que les templates des balises contenues 
-			dans l'élément <code class="codeXML">&lt;personnes&gt;</code> et évitera d'afficher le reste du contenu de option.xml qui n'est pas utilisé
-			ici. La construction de l'entête du tableau ce fera dans un autre template destiné directement à l'élément 
-			<code class="codeXML">&lt;personnes&gt;</code> puisque celui-ci ne sera appelé qu'une fois et avant les éléments enfants. La feuille de
-			style ressemble à ceci :
+			Ce template sera appelÃ© par un Ã©lÃ©ment <code class="codeXML">&lt;xsl:apply-template&gt;</code> avec l'attribut <code class="codeXML attribut">select</code>
+			restreint Ã  la valeur <code class="codeXML valeur">//personnes</code>. Ceci permettra de n'appliquer que les templates des balises contenues 
+			dans l'Ã©lÃ©ment <code class="codeXML">&lt;personnes&gt;</code> et Ã©vitera d'afficher le reste du contenu de option.xml qui n'est pas utilisÃ©
+			ici. La construction de l'entÃªte du tableau ce fera dans un autre template destinÃ© directement Ã  l'Ã©lÃ©ment 
+			<code class="codeXML">&lt;personnes&gt;</code> puisque celui-ci ne sera appelÃ© qu'une fois et avant les Ã©lÃ©ments enfants. La feuille de
+			style ressemble Ã  ceci :
 		</p>
 		
 		<div class="panel panel-default code-panel">
@@ -320,9 +320,9 @@
 									<div class="tab">
 										&lt;tr&gt;<br/>
 										<div class="tab">
-											&lt;th&gt;<span class="contenuTexte">Prénom</span>&lt;/th&gt;<br/>
+											&lt;th&gt;<span class="contenuTexte">PrÃ©nom</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">Nom</span>&lt;/th&gt;<br/>
-											&lt;th&gt;<span class="contenuTexte">Téléphone</span>&lt;/th&gt;<br/>
+											&lt;th&gt;<span class="contenuTexte">TÃ©lÃ©phone</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">email</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">Adresse</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">Ville</span>&lt;/th&gt;<br/>
@@ -358,13 +358,13 @@
 			</div>
 		</div>
 		<p>
-			Cette feuille de style est fonctionnelle mais présente quelques lacunes. Premièrement le faites de traiter les éléments enfants
-			de <code class="codeXML">&lt;personne&gt;</code> indiféremment les uns des autres et sans se soucier de l'ordre d'apparition engendre une
-			irrégularité dans la présentation du tableau. Le contenu des cellules risque de ne pas contenir les bonnes informations. Par exemple
-			la troisième personne de la liste ne possède pas de numéro de téléphone (l'élément <code class="codeXML">&lt;phone&gt;</code> est absent) ce
-			qui décalle le remplissage des cellules. Pour pallier ce problème un traitement individuel des éléments enfants est nécessaire.
-			Une utilisation abusive de l'élément <code class="codeXML">&lt;xsl:choose&gt;</code> permet de remplir les cellules dans le bon ordre et 
-			d'incérer un blanc en cas d'absence d'un élément facultatif. Ceci ce faisant dans le template de personne il devient :
+			Cette feuille de style est fonctionnelle mais prÃ©sente quelques lacunes. PremiÃ¨rement le faites de traiter les Ã©lÃ©ments enfants
+			de <code class="codeXML">&lt;personne&gt;</code> indifÃ©remment les uns des autres et sans se soucier de l'ordre d'apparition engendre une
+			irrÃ©gularitÃ© dans la prÃ©sentation du tableau. Le contenu des cellules risque de ne pas contenir les bonnes informations. Par exemple
+			la troisiÃ¨me personne de la liste ne possÃ¨de pas de numÃ©ro de tÃ©lÃ©phone (l'Ã©lÃ©ment <code class="codeXML">&lt;phone&gt;</code> est absent) ce
+			qui dÃ©calle le remplissage des cellules. Pour pallier ce problÃ¨me un traitement individuel des Ã©lÃ©ments enfants est nÃ©cessaire.
+			Une utilisation abusive de l'Ã©lÃ©ment <code class="codeXML">&lt;xsl:choose&gt;</code> permet de remplir les cellules dans le bon ordre et 
+			d'incÃ©rer un blanc en cas d'absence d'un Ã©lÃ©ment facultatif. Ceci ce faisant dans le template de personne il devient :
 		</p>
 		<div class="panel panel-default code-panel">
 			<div class="panel-heading">
@@ -381,9 +381,9 @@
 								<div class="tab">
 									&lt;xsl:choose&gt;<br/>
 									<div class="tab">
-										&lt;xsl:when <span class="attribut">test</span>=<span class="valeur">"prénom"</span>&gt;<br/>
+										&lt;xsl:when <span class="attribut">test</span>=<span class="valeur">"prÃ©nom"</span>&gt;<br/>
 										<div class="tab">
-											&lt;td&gt;&lt;xsl:apply-templates <span class="attribut">select</span>=<span class="valeur">"prénom"</span>&gt;&lt;/td&gt;
+											&lt;td&gt;&lt;xsl:apply-templates <span class="attribut">select</span>=<span class="valeur">"prÃ©nom"</span>&gt;&lt;/td&gt;
 										</div>
 										&lt;/xsl:when&gt;<br/>
 										&lt;xsl:otherwise&gt;<br/>
@@ -484,43 +484,43 @@
 			</div>
 		</div>
 		<p>
-			Cette solution n'est pas très élégente et semble répétitive cependant elle est robuste et fonctionne parfaitement. Quelque soit
-			l'ordre des éléments enfants de <code class="codeXML">&lt;personne&gt;</code> ils seront traités toujours de la même façon de tel sorte
-			que le tableau soit correctement rempli. Si un ou plusieurs éléments sont manquant les cellules seront remplie par des blancs.
-			Enfin puisque chaque élément est traité individuellement il a suffit d'ajouter une balise <code class="codeXML">&lt;a&gt;</code>
+			Cette solution n'est pas trÃ¨s Ã©lÃ©gente et semble rÃ©pÃ©titive cependant elle est robuste et fonctionne parfaitement. Quelque soit
+			l'ordre des Ã©lÃ©ments enfants de <code class="codeXML">&lt;personne&gt;</code> ils seront traitÃ©s toujours de la mÃªme faÃ§on de tel sorte
+			que le tableau soit correctement rempli. Si un ou plusieurs Ã©lÃ©ments sont manquant les cellules seront remplie par des blancs.
+			Enfin puisque chaque Ã©lÃ©ment est traitÃ© individuellement il a suffit d'ajouter une balise <code class="codeXML">&lt;a&gt;</code>
 			dans le traitement de <code class="codeXML">&lt;email&gt;</code>. L'attribut <code class="codeXML attribut">href</code> a la valeur
-			<code class="codeXML valeur">"{concat('mailto:',text())}"</code>, une instruction XPath qui construit une chaine de caractère
-			commençant par <code class="codeXML comment">mailto:</code> suivi du contenu texte de l'élément <code class="codeXML">&lt;email&gt;</code> permettant d'ouvrir 
-			l'écriture d'un nouvel email lors d'un clique sur le lien.
+			<code class="codeXML valeur">"{concat('mailto:',text())}"</code>, une instruction XPath qui construit une chaine de caractÃ¨re
+			commenÃ§ant par <code class="codeXML comment">mailto:</code> suivi du contenu texte de l'Ã©lÃ©ment <code class="codeXML">&lt;email&gt;</code> permettant d'ouvrir 
+			l'Ã©criture d'un nouvel email lors d'un clique sur le lien.
 		</p>
 		<p>
-			Finalement la construction des templates précédents permet de répondre au cahier des charges. Une conception modulaire permet une
-			une meilleurs compréhension par l'homme et une maintenabilité facilité c'est pourquoi la feuille de style finale a été
-			décomposé en deux feuilles. La <a href="livrables/liste_personnes/xsl/main_liste_personnes.xsl">première</a> contient les bases pour une 
-			transformation au format XHTML vue dans la <a href="#xhtml">première partie</a> et inclue la 
+			Finalement la construction des templates prÃ©cÃ©dents permet de rÃ©pondre au cahier des charges. Une conception modulaire permet une
+			une meilleurs comprÃ©hension par l'homme et une maintenabilitÃ© facilitÃ© c'est pourquoi la feuille de style finale a Ã©tÃ©
+			dÃ©composÃ© en deux feuilles. La <a href="livrables/liste_personnes/xsl/main_liste_personnes.xsl">premiÃ¨re</a> contient les bases pour une 
+			transformation au format XHTML vue dans la <a href="#xhtml">premiÃ¨re partie</a> et inclue la 
 			<a href="livrables/liste_personnes/xsl/liste_personnes.xsl">seconde</a> qui contient la construction du tableau.
 		</p>
 		<h2 id="fiches">III. Construction de fiches</h2>
 		<p>
-			L'exercice central de ce bureau d'étude est la construction de fiches à partir de listes d'éléments. Ainsi le contenu de cette partie
-			présente les différentes solutions qui ont été choisies pour produir les fiches des étudiants et celles des cours. Les deux types de 
-			fiches présentent les mêmes problèmatiques, c'est pourquoi seule la construction des fiches des étudiants sera détaillée.
+			L'exercice central de ce bureau d'Ã©tude est la construction de fiches Ã  partir de listes d'Ã©lÃ©ments. Ainsi le contenu de cette partie
+			prÃ©sente les diffÃ©rentes solutions qui ont Ã©tÃ© choisies pour produir les fiches des Ã©tudiants et celles des cours. Les deux types de 
+			fiches prÃ©sentent les mÃªmes problÃ¨matiques, c'est pourquoi seule la construction des fiches des Ã©tudiants sera dÃ©taillÃ©e.
 		</p>
-		<h3 id="etudiants">III.a. Fiches des étudiants</h3>
+		<h3 id="etudiants">III.a. Fiches des Ã©tudiants</h3>
 		<p>
-			Cette fois l'exercice consiste à construire la fiche de chaque étudiant avec leurs notes, leurs absences et leurs appréciations.
-			Pour cela l'application source option.xml comporte deux entités cours-tv.xml et cours-xs.xml contenant la liste des étudiants
-			inscrit au cours correspondant avec leurs note, absence et appréciation. En reprenant la feuille de style de base vue en
-			première partie il ne reste qu'à construire les templates qui produiront la mise en forme des fiches désirées.
+			Cette fois l'exercice consiste Ã  construire la fiche de chaque Ã©tudiant avec leurs notes, leurs absences et leurs apprÃ©ciations.
+			Pour cela l'application source option.xml comporte deux entitÃ©s cours-tv.xml et cours-xs.xml contenant la liste des Ã©tudiants
+			inscrit au cours correspondant avec leurs note, absence et apprÃ©ciation. En reprenant la feuille de style de base vue en
+			premiÃ¨re partie il ne reste qu'Ã  construire les templates qui produiront la mise en forme des fiches dÃ©sirÃ©es.
 		</p>
 		<p>
-			Contrairement à la liste des personnes ici le choix a été fait de créer un template nommé. Ce choix est dû au fait que le template
-			de construction des fiches étudiant doit s'appliquer à toutes les personnes ce qui rentre en conflit avec le template de la liste
-			des personnes. La solution de parcourir la liste des étudiants de chaque cours a été écartée car elle semble plus complexe à mettre
-			en oeuvre. Les étudiant ne sont unique que dans un cours et peuvent ne pas être présent dans un autre cours tandis que la liste
-			des personnes est exhaustive et chaque élément personne est unique par définition. Ainsi deux templates ont été conçus pour compléter
-			cet exercice. Le premier est celui qui sera appelé par le template principal et qui appliquera le second à chaque personne contenu
-			dans la liste des personnes. Ce premier template a été nommé fiches_etudiants et est composé comme suit :
+			Contrairement Ã  la liste des personnes ici le choix a Ã©tÃ© fait de crÃ©er un template nommÃ©. Ce choix est dÃ» au fait que le template
+			de construction des fiches Ã©tudiant doit s'appliquer Ã  toutes les personnes ce qui rentre en conflit avec le template de la liste
+			des personnes. La solution de parcourir la liste des Ã©tudiants de chaque cours a Ã©tÃ© Ã©cartÃ©e car elle semble plus complexe Ã  mettre
+			en oeuvre. Les Ã©tudiant ne sont unique que dans un cours et peuvent ne pas Ãªtre prÃ©sent dans un autre cours tandis que la liste
+			des personnes est exhaustive et chaque Ã©lÃ©ment personne est unique par dÃ©finition. Ainsi deux templates ont Ã©tÃ© conÃ§us pour complÃ©ter
+			cet exercice. Le premier est celui qui sera appelÃ© par le template principal et qui appliquera le second Ã  chaque personne contenu
+			dans la liste des personnes. Ce premier template a Ã©tÃ© nommÃ© fiches_etudiants et est composÃ© comme suit :
 		</p>
 		<div class="panel panel-default code-panel">
 			<div class="panel-heading">
@@ -548,15 +548,15 @@
 			</div>
 		</div>
 		<p>
-			Rien de spécial dans cette conception. La boucle <code class="codeXML">&lt;xsl:for-each <code class="attribut">select</code>
+			Rien de spÃ©cial dans cette conception. La boucle <code class="codeXML">&lt;xsl:for-each <code class="attribut">select</code>
 			=<code class="valeur">"//personne"</code>&gt;</code> permet de parcourir la liste des personnes et pour chacune d'entre elle 
-			le template <code class="codeXML valeur">fiche_etudiant</code> est appliqué avec le paramètre <code class="comment">id</code>
+			le template <code class="codeXML valeur">fiche_etudiant</code> est appliquÃ© avec le paramÃ¨tre <code class="comment">id</code>
 			qui a pour valeur la valeur de l'attribut <code class="codeXML attribut">id</code> de <code class="codeXML">&lt;personne&gt;</code>
-			et dont l'utilité sera justifiée par la suite.
+			et dont l'utilitÃ© sera justifiÃ©e par la suite.
 		</p>
 		<p>
-			Le second template a été nommé <code class="codeXML attribut">fiche_etudiant</code> et est destiné à la construction d'un tableau
-			contenant la liste des cours auquels l'étudiant est inscrit avec ses notes, absences et appréciations le tout sous la forme d'un
+			Le second template a Ã©tÃ© nommÃ© <code class="codeXML attribut">fiche_etudiant</code> et est destinÃ© Ã  la construction d'un tableau
+			contenant la liste des cours auquels l'Ã©tudiant est inscrit avec ses notes, absences et apprÃ©ciations le tout sous la forme d'un
 			tableau.
 		</p>
 		<div class="panel panel-default code-panel">
@@ -570,16 +570,16 @@
 						&lt;xsl:template <span class="attribut">name</span>=<span class="valeur">"fiche_etudiant"</span>&gt;<br/>
 						<div class="tab">
 							&lt;xsl:param <span class="attribut">name</span>=<span class="valeur">"id"</span>/&gt;<br/>
-							&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"../../cours/étudiant[@id = $id]"</span>&gt;<br/>
+							&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"../../cours/Ã©tudiant[@id = $id]"</span>&gt;<br/>
 							<div class="tab">
 								&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"notemoy"</span>&gt;<br/>
 								<div class="tab">
-									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(../../cours/étudiant[@id = $id]/note) div count(../../cours/étudiant[@id = $id]/note)"</span>/&gt;<br/>
+									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(../../cours/Ã©tudiant[@id = $id]/note) div count(../../cours/Ã©tudiant[@id = $id]/note)"</span>/&gt;<br/>
 								</div>
 								&lt;/xsl:variable&gt;<br/>
 								&lt;h3 <span class="attribut">id</span>=<span class="valeur">"{@id}"</span>&gt;<br/>
 								<div class="tab">
-									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"prénom"</span>/&gt;<br/>
+									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"prÃ©nom"</span>/&gt;<br/>
 									&lt;xsl:text&gt; &lt;/xsl:text&gt;<br/>
 									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"nom"</span>/&gt;<br/>
 								</div>
@@ -599,18 +599,18 @@
 											&lt;th&gt;<span class="contenuTexte">Cours</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">Note</span>&lt;/th&gt;<br/>
 											&lt;th&gt;<span class="contenuTexte">Absences</span>&lt;/th&gt;<br/>
-											&lt;th&gt;<span class="contenuTexte">Appréciation</span>&lt;/th&gt;<br/>
+											&lt;th&gt;<span class="contenuTexte">ApprÃ©ciation</span>&lt;/th&gt;<br/>
 										</div>
 										&lt;/tr&gt;<br/>
 									</div>
 									&lt;/thead&gt;<br/>
 									&lt;tbody&gt;<br/>
 									<div class="tab">
-										&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"//étudiant[@id = $id]"</span>&gt;<br/>
+										&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"//Ã©tudiant[@id = $id]"</span>&gt;<br/>
 										<div class="tab">
 											&lt;tr&gt;<br/>
 											<div class="tab">
-												&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"nbCoursInscr"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../cours/étudiant[@id = $id])"</span>/&gt;&lt;/xsl:variable&gt;<br/>
+												&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"nbCoursInscr"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../cours/Ã©tudiant[@id = $id])"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 												&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"note&lt;10"</span>&gt;<br/>
 												<div class="tab">
 													&lt;xsl:attribute <span class="attribut">name</span>=<span class="valeur">"class"</span>&gt;&lt;xsl:text&gt;<span class="contenuTexte">danger</span>&lt;/xsl:text&gt;&lt;/xsl:attribute&gt;<br/>
@@ -626,7 +626,7 @@
 													&lt;xsl:attribute <span class="attribut">name</span>=<span class="valeur">"class"</span>&gt;&lt;xsl:text&gt;<span class="contenuTexte">success</span>&lt;/xsl:text&gt;&lt;/xsl:attribute&gt;<br/>
 												</div>
 												&lt;/xsl:if&gt;<br/>
-												&lt;td&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"../@intitulé"</span>/&gt;&lt;/td&gt;<br/>
+												&lt;td&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"../@intitulÃ©"</span>/&gt;&lt;/td&gt;<br/>
 												&lt;td&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"note"</span>/&gt;&lt;/td&gt;<br/>
 												&lt;td&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"absences"</span>/&gt;&lt;/td&gt;<br/>
 												&lt;td&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"comment"</span>/&gt;&lt;/td&gt;<br/>
@@ -647,73 +647,73 @@
 			</div>
 		</div>
 		<p>
-			Ce template fait beaucoup de chose. Tout d'abord il reçoit le paramètre <code class="comment">id</code> qui est utilisé
-			imédiatement par la boucle <code class="codeXML">&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"../../cours/étudiant[@id = $id]"</span>&gt;</code>
-			ce qui permet de ne traiter que les personnes qui sont inscrit a un cours en tant qu'étudiant (parmis la liste des personnes
-			deux d'entre elles sont des professeurs). On remarque que les attributs comparés dans le <code class="codeXML attribut">test</code>
-			ont le même nom dans l'application
-			XML (<code class="codeXML attribut">id</code>). C'est pour cette raison que le <code class="codeXML">&lt;xsl:param/&gt;</code> a été
-			utilisé (la comparaison n'aurait pas été possible directement). 
+			Ce template fait beaucoup de chose. Tout d'abord il reÃ§oit le paramÃ¨tre <code class="comment">id</code> qui est utilisÃ©
+			imÃ©diatement par la boucle <code class="codeXML">&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"../../cours/Ã©tudiant[@id = $id]"</span>&gt;</code>
+			ce qui permet de ne traiter que les personnes qui sont inscrit a un cours en tant qu'Ã©tudiant (parmis la liste des personnes
+			deux d'entre elles sont des professeurs). On remarque que les attributs comparÃ©s dans le <code class="codeXML attribut">test</code>
+			ont le mÃªme nom dans l'application
+			XML (<code class="codeXML attribut">id</code>). C'est pour cette raison que le <code class="codeXML">&lt;xsl:param/&gt;</code> a Ã©tÃ©
+			utilisÃ© (la comparaison n'aurait pas Ã©tÃ© possible directement). 
 		</p>
 		<p>
-			Ensuite le template calcule la note moyenne de l'étudiant en faisant la division de la
-			somme de ses notes, <code class="codeXML valeur">"sum(../../cours/étudiant[@id = $id]/note)"</code>, par le nombre de cours auquel il est inscrit, 
-			<code class="codeXML valeur">"count(../../cours/étudiant[@id = $id]/note)"</code> à l'aide de l'opérateur XPath <code class="codeXML comment">div</code>.
-			Cette valeur est stockée dans la variable <code class="codeXML comment">notemoy</code> et est affichée en dessous des nom et prénom
-			de l'étudiant concerné le tout se trouvant dans des balises <code class="codeXML">&lt;h3&gt;</code> et <code class="codeXML">&lt;h4&gt;</code>
-			ce qui constituera la présentation de la fiche de l'étudiant.
+			Ensuite le template calcule la note moyenne de l'Ã©tudiant en faisant la division de la
+			somme de ses notes, <code class="codeXML valeur">"sum(../../cours/Ã©tudiant[@id = $id]/note)"</code>, par le nombre de cours auquel il est inscrit, 
+			<code class="codeXML valeur">"count(../../cours/Ã©tudiant[@id = $id]/note)"</code> Ã  l'aide de l'opÃ©rateur XPath <code class="codeXML comment">div</code>.
+			Cette valeur est stockÃ©e dans la variable <code class="codeXML comment">notemoy</code> et est affichÃ©e en dessous des nom et prÃ©nom
+			de l'Ã©tudiant concernÃ© le tout se trouvant dans des balises <code class="codeXML">&lt;h3&gt;</code> et <code class="codeXML">&lt;h4&gt;</code>
+			ce qui constituera la prÃ©sentation de la fiche de l'Ã©tudiant.
 		</p>
 		<p>
-			La suite du template construit le tableau contenant la liste des cours avec les notes, les absences et les apprécations correspondantes
-			en commençant par l'entête comprise dans les balises <code class="codeXML">&lt;thead&gt;</code>. Ensuite un test est effectué sur
+			La suite du template construit le tableau contenant la liste des cours avec les notes, les absences et les apprÃ©cations correspondantes
+			en commenÃ§ant par l'entÃªte comprise dans les balises <code class="codeXML">&lt;thead&gt;</code>. Ensuite un test est effectuÃ© sur
 			la valeur de la note, si celle-ci est en dessous de 10 la balise <code class="codeXML">&lt;tr&gt;</code> se verra ajouter l'attribut
 			<code class="codeXML attribut">class</code> avec la valeur <code class="codeXML valeur">"danger"</code> ce qui fera apparaitre en
-			rouge la ligne du tableau correspondant à cette note. De même si la note est entre 10 et 12 la valeur sera
-			<code class="codeXML valeur">"warning"</code> et la ligne apparaitra en jaune orangée. Enfin si la valeur est au-dessus de 15 la
-			classe associée sera <code class="codeXML valeur">"success"</code> et la ligne apparaitra verte. Sinon la couleur ne sera pas modifiée.
-			Les autres cellules du tableau sont simplement remplies en récupérant les valeurs de chaque élément avec des balises 
+			rouge la ligne du tableau correspondant Ã  cette note. De mÃªme si la note est entre 10 et 12 la valeur sera
+			<code class="codeXML valeur">"warning"</code> et la ligne apparaitra en jaune orangÃ©e. Enfin si la valeur est au-dessus de 15 la
+			classe associÃ©e sera <code class="codeXML valeur">"success"</code> et la ligne apparaitra verte. Sinon la couleur ne sera pas modifiÃ©e.
+			Les autres cellules du tableau sont simplement remplies en rÃ©cupÃ©rant les valeurs de chaque Ã©lÃ©ment avec des balises 
 			<code class="codeXML">&lt;xsl:value-of&gt;</code>.
 		</p>
 		<p>
-			Ce template n'est pas parfait et part du principe que l'application XML d'origine est définie telle quelle. C'est à dire que l'ordre
-			des éléments, leurs nombres et leurs présences sera toujours la même. Ceci pourraît être une erreur et la production d'une DTD permettrait
-			d'établir clairement la construction de l'application XML option.xml et de définir des templates fonctionnant dans tous les cas.
+			Ce template n'est pas parfait et part du principe que l'application XML d'origine est dÃ©finie telle quelle. C'est Ã  dire que l'ordre
+			des Ã©lÃ©ments, leurs nombres et leurs prÃ©sences sera toujours la mÃªme. Ceci pourraÃ®t Ãªtre une erreur et la production d'une DTD permettrait
+			d'Ã©tablir clairement la construction de l'application XML option.xml et de dÃ©finir des templates fonctionnant dans tous les cas.
 		</p>
 		<p>
-			Enfin comme pour la liste des personnes la feuille de style final a été divisée en deux avec une feuille de style 
-			<a href="livrables/fiches_etudiants/xsl/main_fiches_etudiants.xsl">principale</a> qui est sensiblement la même que précédement mais qui,
+			Enfin comme pour la liste des personnes la feuille de style final a Ã©tÃ© divisÃ©e en deux avec une feuille de style 
+			<a href="livrables/fiches_etudiants/xsl/main_fiches_etudiants.xsl">principale</a> qui est sensiblement la mÃªme que prÃ©cÃ©dement mais qui,
 			cette fois, inclue la <a href="livrables/fiches_etudiants/xsl/fiches_etudiants.xsl">feuille de style</a> construisant les fiches des 
-			étudiant. Le résultat de la transformation peut être observé <a href="livrables/fiches_etudiants/option_transformed.xhtml">ici</a> et son code 
-			source <a href="livrables/fiches_etudiants/option_collapsed.xml">là</a>.
+			Ã©tudiant. Le rÃ©sultat de la transformation peut Ãªtre observÃ© <a href="livrables/fiches_etudiants/option_transformed.xhtml">ici</a> et son code 
+			source <a href="livrables/fiches_etudiants/option_collapsed.xml">lÃ </a>.
 		</p>
 		<h3 id="cours">III.b. Fiches des cours</h3>
 		<p>
-			Comme annoncé au début de cette partie la production de la feuille de style permettant d'obtenir les fiches des cours ne présente
-			pas de nouveauté par rapport aux fiches des étudiants ci-dessus. L'utilisation d'un template nommé avec un paramètre pour stocker
-			la valeur de l'id des personnes permet de résoudre le problème de comparaison des attributs id des élément personne et étudiant.
+			Comme annoncÃ© au dÃ©but de cette partie la production de la feuille de style permettant d'obtenir les fiches des cours ne prÃ©sente
+			pas de nouveautÃ© par rapport aux fiches des Ã©tudiants ci-dessus. L'utilisation d'un template nommÃ© avec un paramÃ¨tre pour stocker
+			la valeur de l'id des personnes permet de rÃ©soudre le problÃ¨me de comparaison des attributs id des Ã©lÃ©ment personne et Ã©tudiant.
 		</p>
 		<p>
-			Ainsi comme précédemment la feuille de style final est composé de deux feuilles. La première est toujours sensiblement la 
-			<a href="livrables/fiches_cours/xsl/main_fiches_cours.xsl">même</a> et inclue la <a href="livrables/fiches_cours/xsl/fiches_cours.xsl">seconde</a>
-			qui génère la présentation des fiches des cours. Le résultat de la transformation peut être observé 
-			<a href="livrables/fiches_cours/option_transformed.xhtml">ici</a> et sont code source <a href="livrables/fiches_cours/option_collapsed.xml">là</a>.
+			Ainsi comme prÃ©cÃ©demment la feuille de style final est composÃ© de deux feuilles. La premiÃ¨re est toujours sensiblement la 
+			<a href="livrables/fiches_cours/xsl/main_fiches_cours.xsl">mÃªme</a> et inclue la <a href="livrables/fiches_cours/xsl/fiches_cours.xsl">seconde</a>
+			qui gÃ©nÃ¨re la prÃ©sentation des fiches des cours. Le rÃ©sultat de la transformation peut Ãªtre observÃ© 
+			<a href="livrables/fiches_cours/option_transformed.xhtml">ici</a> et sont code source <a href="livrables/fiches_cours/option_collapsed.xml">lÃ </a>.
 		</p>
 		<h2 id="graphiques">IV. Graphiques SVG</h2>
 		<p>
-			Les deux premières parties de ce bureau d'étude montre une utilisation basique du XSLT pour obtenir un fichier XHTML valide affichant
-			le contenu d'une application XML sous forme de tableau. Ceux-ci prenant en compte les références ID et traitant le
-			contenu pour obtenir des informations supplémentaire (lien cliquable, note moyenne, etc.). Cependant le XSLT permet de faire bien
-			plus de chose, comme produire un graphique SVG à partir de la même application XML utilisé précédement.
+			Les deux premiÃ¨res parties de ce bureau d'Ã©tude montre une utilisation basique du XSLT pour obtenir un fichier XHTML valide affichant
+			le contenu d'une application XML sous forme de tableau. Ceux-ci prenant en compte les rÃ©fÃ©rences ID et traitant le
+			contenu pour obtenir des informations supplÃ©mentaire (lien cliquable, note moyenne, etc.). Cependant le XSLT permet de faire bien
+			plus de chose, comme produire un graphique SVG Ã  partir de la mÃªme application XML utilisÃ© prÃ©cÃ©dement.
 		</p>
 		<h3 id="histogrammes">IV.a. Histogrammes</h3>
 		<p>
-			Ici le défis est de produire un histogramme des notes pour chaque cours. Cet histogramme doit être au format SVG et devra pouvoir
-			être validé par le W3C. L'utilisation du SVG ne pose pas de problème en soit cependant l'introduction de balise SVG dans un document
+			Ici le dÃ©fis est de produire un histogramme des notes pour chaque cours. Cet histogramme doit Ãªtre au format SVG et devra pouvoir
+			Ãªtre validÃ© par le W3C. L'utilisation du SVG ne pose pas de problÃ¨me en soit cependant l'introduction de balise SVG dans un document
 			XHTML rend ce document non valide au sens du XHTML strict. La solution est d'adapter le doctype du document sortant. Le doctype correspondant
-			à nos besoin est le suivant : <code class="contenuText">"-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"</code>. Ce doctype est
-			destiné au document contenant un mélange (bien formé) de XHTML, SVG et MathML. Néanmoins ce dernier ne sera pas utilisé. Après une
-			étude superficielle de ce qu'il est possible de faire avec le SVG, la construction d'un template produisant le code nécessaire à l'affichage
-			d'un histogramme à été réalisée.
+			Ã  nos besoin est le suivant : <code class="contenuText">"-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"</code>. Ce doctype est
+			destinÃ© au document contenant un mÃ©lange (bien formÃ©) de XHTML, SVG et MathML. NÃ©anmoins ce dernier ne sera pas utilisÃ©. AprÃ¨s une
+			Ã©tude superficielle de ce qu'il est possible de faire avec le SVG, la construction d'un template produisant le code nÃ©cessaire Ã  l'affichage
+			d'un histogramme Ã  Ã©tÃ© rÃ©alisÃ©e.
 		</p>
 		<div class="panel panel-default code-panel">
 			<div class="panel-heading">
@@ -747,20 +747,20 @@
 								&lt;svg:text <span class="attribut">x</span>=<span class="valeur">"0"</span> <span class="attribut">y</span>=<span class="valeur">"{$Htextsize}"</span> <span class="attribut">transform</span>=<span class="valeur">"translate({$rectX - $Hmarge},{$rectH * 2 div 4 - $rectY - ($Htextsize div 2)})"</span>&gt;10&lt;/svg:text&gt;<br/>
 								&lt;svg:text <span class="attribut">x</span>=<span class="valeur">"0"</span> <span class="attribut">y</span>=<span class="valeur">"{$Htextsize}"</span> <span class="attribut">transform</span>=<span class="valeur">"translate({$rectX - $Hmarge},{$rectH * 3 div 4 - $rectY - ($Htextsize div 2)})"</span>&gt;5&lt;/svg:text&gt;<br/>
 								&lt;svg:text <span class="attribut">x</span>=<span class="valeur">"0"</span> <span class="attribut">y</span>=<span class="valeur">"{$Htextsize}"</span> <span class="attribut">transform</span>=<span class="valeur">"translate({$rectX - $Hmarge},{$rectH - $Htextsize - $rectY})"</span>&gt;0&lt;/svg:text&gt;<br/>
-								&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"moy"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(étudiant/note) div count(étudiant)"</span>/&gt;&lt;/xsl:variable&gt;<br/>
+								&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"moy"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(Ã©tudiant/note) div count(Ã©tudiant)"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 								&lt;svg:line <span class="attribut">x1</span>=<span class="valeur">"{$rectX}"</span> <span class="attribut">y1</span>=<span class="valeur">"{$rectH * (20 - $moy) div 20}"</span> <span class="attribut">x2</span>=<span class="valeur">"{$rectX + $rectW}"</span> <span class="attribut">y2</span>=<span class="valeur">"{$rectH * (20 - $moy) div 20}"</span> <span class="attribut">style</span>=<span class="valeur">"stroke:green;strock-width:5;"</span>/&gt;<br/>
 								&lt;svg:line <span class="attribut">x1</span>=<span class="valeur">"{$rectX}"</span> <span class="attribut">y1</span>=<span class="valeur">"{$rectH * 10 div 20}"</span> <span class="attribut">x2</span>=<span class="valeur">"{$rectX + $rectW}"</span> <span class="attribut">y2</span>=<span class="valeur">"{$rectH * 10 div 20}"</span> <span class="attribut">style</span>=<span class="valeur">"stroke:red;strock-width:5;"</span>/&gt;<br/>
-								&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"étudiant"</span>&gt;<br/>
+								&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"Ã©tudiant"</span>&gt;<br/>
 								<div class="tab">
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"w"</span>&gt;15&lt;/xsl:variable&gt;<br/>
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"id"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"@id"</span>/&gt;&lt;/xsl:variable&gt;<br/>
-									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"X"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"($w div 2) + ($rectW div (count(../étudiant) + 1)) * position()"</span>/&gt;&lt;/xsl:variable&gt;<br/>
+									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"X"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"($w div 2) + ($rectW div (count(../Ã©tudiant) + 1)) * position()"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"Y"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"$rectH * note div 20"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 									&lt;svg:text <span class="attribut">x</span>=<span class="valeur">"0"</span> <span class="attribut">y</span>=<span class="valeur">"{$Htextsize}"</span> <span class="attribut">transform</span>=<span class="valeur">"translate({$X + 10},{$rectH + 5}) rotate(60 0,0)"</span>&gt;<br/>
 									<div class="tab">
 										&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"../../personnes/personne[@id = $id]/nom"</span>/&gt;<br/>
 										&lt;xsl:text&gt; &lt;/xsl:text&gt;<br/>
-										&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"../../personnes/personne[@id = $id]/prénom"</span>/&gt;<br/>
+										&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"../../personnes/personne[@id = $id]/prÃ©nom"</span>/&gt;<br/>
 									</div>
 									&lt;/svg:text&gt;<br/>
 									&lt;svg:rect <span class="attribut">x</span>=<span class="valeur">"{$X}"</span> <span class="attribut">y</span>=<span class="valeur">"{$rectH - $Y}"</span> <span class="attribut">width</span>=<span class="valeur">"{$w}"</span> <span class="attribut">height</span>=<span class="valeur">"{$Y}"</span> <span class="attribut">style</span>=<span class="valeur">"fill:blue;stroke:black;strock-width=2;"</span>/&gt;<br/>
@@ -777,37 +777,37 @@
 			</div>
 		</div>
 		<p>
-			On remarque que pour ce template une certaine quantité de variable ont été nécessaires. Celles-ci permettent de facilité les modifications
-			sur l'apparence globale du schéma (dimension, position, etc.) et évite la redondance de valeur fixé à la mains. La réalisation de ce 
-			schéma n'a pas présenté de difficulté majeur. Les seules sources de réflexion intenses ont été l'écriture des algorithmes définissant
-			la position et la taille des diférentes formes de l'histogramme (principalement des lignes et des rectangles) pour que celle-ci s'adapte
-			à la quantité d'information à afficher.
+			On remarque que pour ce template une certaine quantitÃ© de variable ont Ã©tÃ© nÃ©cessaires. Celles-ci permettent de facilitÃ© les modifications
+			sur l'apparence globale du schÃ©ma (dimension, position, etc.) et Ã©vite la redondance de valeur fixÃ© Ã  la mains. La rÃ©alisation de ce 
+			schÃ©ma n'a pas prÃ©sentÃ© de difficultÃ© majeur. Les seules sources de rÃ©flexion intenses ont Ã©tÃ© l'Ã©criture des algorithmes dÃ©finissant
+			la position et la taille des difÃ©rentes formes de l'histogramme (principalement des lignes et des rectangles) pour que celle-ci s'adapte
+			Ã  la quantitÃ© d'information Ã  afficher.
 		</p>
 		<p>
-			Le résultat de cette transformation donne <a href="livrables/graphiques_svg/option_collapsed_histo.xml">ceci</a>.
+			Le rÃ©sultat de cette transformation donne <a href="livrables/graphiques_svg/option_collapsed_histo.xml">ceci</a>.
 		</p>
 		<h3 id="camemberts">IV.b. Camemberts</h3>
 		<p>
-			Cette fois le défis est un peu plus corcé. Il est désormais souhaité de construire des diagrammes camemberts pour chaque étudiant.
-			Ceux-ci devront montrer les pourcentages de participation des différentes notes de l'élève sur sa moyenne générale. Par définition
-			les formes géometriques sur lesquelles se base cet exercice sont principalement circulaires. Le langage SVG propose des outils
-			pour dessiner ce genre de forme cependant les calculs nécessaires pour obtenir des schémas corrects ne se contente plus d'opérateur
-			simple (+,-,*,/). Pour obtenir des angles ou les coordonnées des points sur un diagrammes camemberts il faudra nécessairement passer
+			Cette fois le dÃ©fis est un peu plus corcÃ©. Il est dÃ©sormais souhaitÃ© de construire des diagrammes camemberts pour chaque Ã©tudiant.
+			Ceux-ci devront montrer les pourcentages de participation des diffÃ©rentes notes de l'Ã©lÃ¨ve sur sa moyenne gÃ©nÃ©rale. Par dÃ©finition
+			les formes gÃ©ometriques sur lesquelles se base cet exercice sont principalement circulaires. Le langage SVG propose des outils
+			pour dessiner ce genre de forme cependant les calculs nÃ©cessaires pour obtenir des schÃ©mas corrects ne se contente plus d'opÃ©rateur
+			simple (+,-,*,/). Pour obtenir des angles ou les coordonnÃ©es des points sur un diagrammes camemberts il faudra nÃ©cessairement passer
 			par le calcul d'un sinus et d'un cosinus ce qui n'est pas directement fournis par XPath ni XSLT.
 		</p>
 		<p>
-			Pour résoudre ce facheux problème, plusieurs solution sont envisageables. Premièrement il est possible de calculer une approximation
-			de sinus et de cosinus en utilisant leur développement en série qui n'aura besoin que d'opérateur simple. Cependant la précision
-			de cette solution dépend fortement de la valeur à calculer. La seconde solution serait d'utiliser une extension au XSLT. Il existe
-			sur internet différent module permettant d'ajouter de nouvelles fonctionnalités au XSLT de base (par exemple EXSLT). Cependant ces
-			modules ne font pas partie des spécification du W3C et les navigateurs web ne se fatiguent pas à les traiter. Cette solution fonctionnerait
-			donc pour une transformation "manuel" de l'application XML mais ne conviendrait pas directement dans un navigateur. Enfin la dernière
-			solution, celle qui a été choisie, est d'utiliser un autre langage pour réaliser ce calcul. En effet puisque le document résultant
-			de la transformation doit être lu par un navigateur on peut envisager d'incorporer n'importe quel langage compréhensible par un navigateur.
-			Le javascript semble une solution tout à fait adapter à ce besoin.
+			Pour rÃ©soudre ce facheux problÃ¨me, plusieurs solution sont envisageables. PremiÃ¨rement il est possible de calculer une approximation
+			de sinus et de cosinus en utilisant leur dÃ©veloppement en sÃ©rie qui n'aura besoin que d'opÃ©rateur simple. Cependant la prÃ©cision
+			de cette solution dÃ©pend fortement de la valeur Ã  calculer. La seconde solution serait d'utiliser une extension au XSLT. Il existe
+			sur internet diffÃ©rent module permettant d'ajouter de nouvelles fonctionnalitÃ©s au XSLT de base (par exemple EXSLT). Cependant ces
+			modules ne font pas partie des spÃ©cification du W3C et les navigateurs web ne se fatiguent pas Ã  les traiter. Cette solution fonctionnerait
+			donc pour une transformation "manuel" de l'application XML mais ne conviendrait pas directement dans un navigateur. Enfin la derniÃ¨re
+			solution, celle qui a Ã©tÃ© choisie, est d'utiliser un autre langage pour rÃ©aliser ce calcul. En effet puisque le document rÃ©sultant
+			de la transformation doit Ãªtre lu par un navigateur on peut envisager d'incorporer n'importe quel langage comprÃ©hensible par un navigateur.
+			Le javascript semble une solution tout Ã  fait adapter Ã  ce besoin.
 		</p>
 		<p>
-			Maintenant que les principaux problème ont été surmontés il ne reste plus qu'à coder la solution à l'exercice. Voici d'abord
+			Maintenant que les principaux problÃ¨me ont Ã©tÃ© surmontÃ©s il ne reste plus qu'Ã  coder la solution Ã  l'exercice. Voici d'abord
 			le template produisant le code SVG d'un diagramme camembert :
 		</p>
 		<div class="panel panel-default code-panel">
@@ -828,15 +828,15 @@
 						&lt;xsl:template <span class="attribut">name</span>=<span class="valeur">"camembert"</span>&gt;<br/>
 						<div class="tab">
 							&lt;xsl:param <span class="attribut">name</span>=<span class="valeur">"id"</span>/&gt;<br/>
-							&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"nbCoursInscr"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../cours/étudiant[@id = $id])"</span>/&gt;&lt;/xsl:variable&gt;<br/>
+							&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"nbCoursInscr"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../cours/Ã©tudiant[@id = $id])"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 							&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"notemoy"</span>&gt;<br/>
 							<div class="tab">
-								&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(../../cours/étudiant[@id = $id]/note) div count(../../cours/étudiant[@id = $id]/note)"</span>/&gt;<br/>
+								&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"sum(../../cours/Ã©tudiant[@id = $id]/note) div count(../../cours/Ã©tudiant[@id = $id]/note)"</span>/&gt;<br/>
 							</div>
 							&lt;/xsl:variable&gt;<br/>
 							&lt;svg:svg <span class="attribut">xmlns:svg</span>=<span class="valeur">"http://www.w3.org/2000/svg"</span> <span class="attribut">width</span>=<span class="valeur">"{$Cwidth}"</span> <span class="attribut">height</span>=<span class="valeur">"{$Cheight}"</span> <span class="attribut">version</span>=<span class="valeur">"1.1"</span>&gt;<br/>
 							<div class="tab">
-								&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"../../cours/étudiant[@id = $id]/note"</span>&gt;<br/>
+								&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"../../cours/Ã©tudiant[@id = $id]/note"</span>&gt;<br/>
 								<div class="tab">
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"uInt8Max"</span>&gt;255&lt;/xsl:variable&gt;<br/>
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"color"</span>&gt;<br/>
@@ -853,7 +853,7 @@
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"positCours"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../preceding-sibling::cours) + 1"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 									&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"negatePercent"</span>&gt;<br/>
 									<div class="tab">
-										&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"(sum(../../../cours[position() &lt; $positCours]/étudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"</span>/&gt;<br/>
+										&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"(sum(../../../cours[position() &lt; $positCours]/Ã©tudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"</span>/&gt;<br/>
 									</div>
 									&lt;/xsl:variable&gt;<br/>
 									&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"$negatePercent &gt; 0"</span>&gt;<br/>
@@ -871,12 +871,12 @@
 								&lt;/xsl:for-each&gt;<br/>
 							</div>
 							&lt;/svg:svg&gt;<br/>
-							&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"../../cours/étudiant[@id = $id]/note"</span>&gt;<br/>
+							&lt;xsl:for-each <span class="attribut">select</span>=<span class="valeur">"../../cours/Ã©tudiant[@id = $id]/note"</span>&gt;<br/>
 							<div class="tab">
 								&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"positCours"</span>&gt;&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"count(../../preceding-sibling::cours) + 1"</span>/&gt;&lt;/xsl:variable&gt;<br/>
 								&lt;xsl:variable <span class="attribut">name</span>=<span class="valeur">"negatePercent"</span>&gt;<br/>
 								<div class="tab">
-									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"(sum(../../../cours[position() &lt; $positCours]/étudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"</span>/&gt;<br/>
+									&lt;xsl:value-of <span class="attribut">select</span>=<span class="valeur">"(sum(../../../cours[position() &lt; $positCours]/Ã©tudiant[@id = $id]/note) div $nbCoursInscr) div $notemoy"</span>/&gt;<br/>
 								</div>
 								&lt;/xsl:variable&gt;<br/>
 								&lt;xsl:if <span class="attribut">test</span>=<span class="valeur">"$negatePercent &gt; 0"</span>&gt;<br/>
@@ -898,8 +898,8 @@
 		</div>
 		<p>
 			Ce code seul ne suffit pas, les balises <code class="codeXML">&lt;svg:path&gt;</code> ainsi construites ont leurs attributs 
-			<code class="codeXML attribut">d</code> nuls. Celui-ci est desetiné à la définition du chemin représentant le contour de la
-			forme désirée. C'est cet attribut qui définit les part de camembert. C'est pourquoi sa valeur exact est calculée a posteriori
+			<code class="codeXML attribut">d</code> nuls. Celui-ci est desetinÃ© Ã  la dÃ©finition du chemin reprÃ©sentant le contour de la
+			forme dÃ©sirÃ©e. C'est cet attribut qui dÃ©finit les part de camembert. C'est pourquoi sa valeur exact est calculÃ©e a posteriori
 			par une fonction javascript :
 		</p>
 		<div class="panel panel-default code-panel">
@@ -931,11 +931,11 @@
 			</div>
 		</div>
 		<p>
-			Cette fonction n'a besoin d'être définit qu'une seul fois avant sa première utilisation. C'est pourquoi elle a été mise dans un
-			template séparé qui doit être appelé une seule fois avant la construction du premier camembert. Ensuite pour des raisons de
-			simplicité il a été choisie de construire les camemberts "à l'envers". C'est à dire que les parts représentant la portion qui
-			est traitée ne sera pas déssinée. Le dessin sera celui de la part restante. Ainsi les parts restantes se superposeront à chaque itération
-			pour finalement obtenir un camembert complet. Cette description est illustrée ci-dessous :
+			Cette fonction n'a besoin d'Ãªtre dÃ©finit qu'une seul fois avant sa premiÃ¨re utilisation. C'est pourquoi elle a Ã©tÃ© mise dans un
+			template sÃ©parÃ© qui doit Ãªtre appelÃ© une seule fois avant la construction du premier camembert. Ensuite pour des raisons de
+			simplicitÃ© il a Ã©tÃ© choisie de construire les camemberts "Ã  l'envers". C'est Ã  dire que les parts reprÃ©sentant la portion qui
+			est traitÃ©e ne sera pas dÃ©ssinÃ©e. Le dessin sera celui de la part restante. Ainsi les parts restantes se superposeront Ã  chaque itÃ©ration
+			pour finalement obtenir un camembert complet. Cette description est illustrÃ©e ci-dessous :
 		</p>
 		<div class="panel panel-default code-panel">
 			<div class="panel-heading">
@@ -951,15 +951,15 @@
 			</div>
 		</div>
 		<p>
-			Cette procédure possède également l'avantage de ne nécessiter qu'un seul calcul de cosinus et sinus par itération puisque chaque dessin
-			possède la même origine. Le principal (et le seul) défaut de cette méthode est l'importance de l'ordre d'écriture des balises 
+			Cette procÃ©dure possÃ¨de Ã©galement l'avantage de ne nÃ©cessiter qu'un seul calcul de cosinus et sinus par itÃ©ration puisque chaque dessin
+			possÃ¨de la mÃªme origine. Le principal (et le seul) dÃ©faut de cette mÃ©thode est l'importance de l'ordre d'Ã©criture des balises 
 			<code class="codeXML">&lt;path&gt;</code>. 
-			Il faut impérativement que les parts de camembert se superposent dans cet ordre-la sinon le résultat n'aurait aucun sens. Cependant puisque
-			les camemberts sont calculés systématiquement, ce problème n'a pas de raison d'apparaître (notez que c'est ce genre de pensées qui font 
-			apparaître des bugs).
+			Il faut impÃ©rativement que les parts de camembert se superposent dans cet ordre-la sinon le rÃ©sultat n'aurait aucun sens. Cependant puisque
+			les camemberts sont calculÃ©s systÃ©matiquement, ce problÃ¨me n'a pas de raison d'apparaÃ®tre (notez que c'est ce genre de pensÃ©es qui font 
+			apparaÃ®tre des bugs).
 		</p>
 		<p>
-			Enfin il ne reste plus qu'à insérer le javascript qui appelle la fonction définit précédement et attribue la valeur de l'attribut 
+			Enfin il ne reste plus qu'Ã  insÃ©rer le javascript qui appelle la fonction dÃ©finit prÃ©cÃ©dement et attribue la valeur de l'attribut 
 			<code class="codeXML attribut">d</code> de la balise <code class="codeXML">path</code> pour chaque part de camembert.
 		</p>
 		<div class="panel panel-default code-panel">
@@ -987,28 +987,28 @@
 		</div>
 		<p>
 			L'identification de la balise <code class="codeXML">&lt;path&gt;</code> ce fait avec son attribut 
-			<code class="codeXML attribut">id</code> qui prend une valeur calculée de telle sorte qu'elle sera unique pour toutes les parts de
-			camembert présent dans le document résultant. A ce stade le résultat est satisfaisant mais pourrait certainement être encore 
-			amélioré.
+			<code class="codeXML attribut">id</code> qui prend une valeur calculÃ©e de telle sorte qu'elle sera unique pour toutes les parts de
+			camembert prÃ©sent dans le document rÃ©sultant. A ce stade le rÃ©sultat est satisfaisant mais pourrait certainement Ãªtre encore 
+			amÃ©liorÃ©.
 		</p>
 		<p>
 			Ces templates permettent d'obtenir les <a href="livrables/graphiques_svg/option_collapsed_camembert.xml">camembert</a> de chaque
-			élèves.
+			Ã©lÃ¨ves.
 		</p>
 		<h2 id="assemblage">V. Assemblage final</h2>
 		<p>
-			En utilisant toutes les feuilles de style qui ont été produites jusqu'ici, l'application initiale option.xml (avec quelques cours
-			en plus) ressemble désormais à <a href="livrables/resultat_final/option_collapsed.xml">ceci</a>, avec cette 
+			En utilisant toutes les feuilles de style qui ont Ã©tÃ© produites jusqu'ici, l'application initiale option.xml (avec quelques cours
+			en plus) ressemble dÃ©sormais Ã  <a href="livrables/resultat_final/option_collapsed.xml">ceci</a>, avec cette 
 			<a href="livrables/resultat_final/xsl/main_final.xsl">feuille de style</a> qui inclue toutes les autres.
 		</p>
 		<h2 id="conclusion">Conclusion</h2>
 		<p>
-			Ce bureau d'étude a clairement démontré l'intérêt du XSLT pour l'affichage du contenu d'une application XML. Le CSS permettait
-			déjà d'afficher plus joliement ces contenus mais ne permettait aucun traitement des données. Le XSLT autorise des interprétations
-			et des mises en forme beaucoup plus soffistiqués rendant possible la création de contenus et l'obtention de nouvelles informations.
-			Enfin XSLT possède lui aussi des limites qui restent difficiles à atteindre et peuvent facilement être contournées par l'utilisation
-			de modules externes ou d'autres langages. Par ailleurs le format du document résultant n'est pas nécessairement XHTML ni même
-			XML, le XSLT peut transformer l'application sous beaucoup d'autres formes ce qui étend le champ de ses possibilités.
+			Ce bureau d'Ã©tude a clairement dÃ©montrÃ© l'intÃ©rÃªt du XSLT pour l'affichage du contenu d'une application XML. Le CSS permettait
+			dÃ©jÃ  d'afficher plus joliement ces contenus mais ne permettait aucun traitement des donnÃ©es. Le XSLT autorise des interprÃ©tations
+			et des mises en forme beaucoup plus soffistiquÃ©s rendant possible la crÃ©ation de contenus et l'obtention de nouvelles informations.
+			Enfin XSLT possÃ¨de lui aussi des limites qui restent difficiles Ã  atteindre et peuvent facilement Ãªtre contournÃ©es par l'utilisation
+			de modules externes ou d'autres langages. Par ailleurs le format du document rÃ©sultant n'est pas nÃ©cessairement XHTML ni mÃªme
+			XML, le XSLT peut transformer l'application sous beaucoup d'autres formes ce qui Ã©tend le champ de ses possibilitÃ©s.
 		</p>
 		</div>
 	</body>

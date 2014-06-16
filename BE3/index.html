@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="authors" content="Franck Coutouly, Jacques Meykiechel"/>
 		<link href="stylesheets/bootstrap.css" rel="stylesheet"/>
 		<link href="stylesheets/bootstrap-theme.css" rel="stylesheet"/>
 		<link href="stylesheets/index.css" rel="stylesheet"/>
-		<title>Représentation et manipulation de données structurées -€“ BE3</title>
+		<title>ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es -Â€Â“ BE3</title>
 	</head>
 	<body>
 		<div class="panel panel-default sommaire">
@@ -16,7 +16,7 @@
 			<div class="panel-content sommaire-content">
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="#introduction">Introduction</a></li>
-					<li><a href="#requete">I. La  requête</a></li>
+					<li><a href="#requete">I. La  requÃªte</a></li>
 					<li>
 						<a href="#client">II. Le client</a>
 						<ul class="nav subnav">
@@ -34,37 +34,37 @@
 			</div>
 			<div class="panel-content">
 				<div class="list-group livrables-content">
-					<a href="livrables\requete.txt" class="list-group-item">Requête</a>
+					<a href="livrables\requete.txt" class="list-group-item">RequÃªte</a>
 					<a href="livrables\client.html" class="list-group-item">Client</a>
 				</div>
 			</div>
 		</div>
 		<div class="corps">
 			<h1 id="titre">Communication</h1>
-			<h4>Représentation et manipulation de données structurées - BE3</h4>
+			<h4>ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es - BE3</h4>
 			<p>
-				Le présent document décrit le travail réalisé au cours du troisième bureau d'étude
-				du module ouvert disciplinaire "Représentation et manipulation de données structurées",
+				Le prÃ©sent document dÃ©crit le travail rÃ©alisÃ© au cours du troisiÃ¨me bureau d'Ã©tude
+				du module ouvert disciplinaire "ReprÃ©sentation et manipulation de donnÃ©es structurÃ©es",
 				par la colaboration de Jacques Meykiechel et Franck Coutouly (groupe 5).
 			</p>
 			<h2 id="introduction">Introduction</h2>
 			<p>
-				Ce bureau d'étude a pour object la prise en main du protocole XML-RPC. Celui-ci est destiné à simplifier la transmission 
-				de données au format XML via le protocole HTTP. Pour ce faire on commencera par analyser une application
+				Ce bureau d'Ã©tude a pour object la prise en main du protocole XML-RPC. Celui-ci est destinÃ© Ã  simplifier la transmission 
+				de donnÃ©es au format XML via le protocole HTTP. Pour ce faire on commencera par analyser une application
 				fonctionnelle utilisant ce protocole pour communiquer avec un serveur distant. Puis la conception d'un client communiquant
-				avec ce même serveur permettra d'approfondir sont utilisation en association avec l'API javascript Ajax.
+				avec ce mÃªme serveur permettra d'approfondir sont utilisation en association avec l'API javascript Ajax.
 			</p>
-			<h2 id="requete">I. La requête</h2>
+			<h2 id="requete">I. La requÃªte</h2>
 			<p>
-				Une application est fournie. Celle-ci est un client XTHML composé d'un simple formulaire. Le formulaire est transmis à un
-				serveur distant sur lequel ce trouve une autre application. La transmission du formulaire est "cachée" par l'utilisation du PHP
-				et ne peut être directement analysée. Cependant après plusieurs essais et en s'appuyant sur le cours la requète envoyée par
-				le client à pu être déterminée.
-				Cette requête est la suivante : 
+				Une application est fournie. Celle-ci est un client XTHML composÃ© d'un simple formulaire. Le formulaire est transmis Ã  un
+				serveur distant sur lequel ce trouve une autre application. La transmission du formulaire est "cachÃ©e" par l'utilisation du PHP
+				et ne peut Ãªtre directement analysÃ©e. Cependant aprÃ¨s plusieurs essais et en s'appuyant sur le cours la requÃ¨te envoyÃ©e par
+				le client Ã  pu Ãªtre dÃ©terminÃ©e.
+				Cette requÃªte est la suivante : 
 			</p>
 			<div class="panel panel-default code-panel">
 				<div class="panel-heading">
-					<h3 class="panel-title">Requête</h3>
+					<h3 class="panel-title">RequÃªte</h3>
 				</div>
 				<div class="panel-content">	
 					<div class="code-container">
@@ -95,22 +95,22 @@
 			</div>
 			<p>
 				La valeur <code class="codeXML contenuTexte">92</code> contenue entre les balises <code class="codeXML">&lt;string&gt;</code>
-				est le numéro du département qui a été choisi arbitrairement pour effectuer le test. La requète est également disponible
+				est le numÃ©ro du dÃ©partement qui a Ã©tÃ© choisi arbitrairement pour effectuer le test. La requÃ¨te est Ã©galement disponible
 				sous forme de fichier texte en cliquant sur ce <a href="livrables\requete.txt">lien</a>.
 			</p>
 			<p>
-				A partir de là, il est possible de concevoir une autre application cliente fournissant le même service que celle analysée ici.
+				A partir de lÃ , il est possible de concevoir une autre application cliente fournissant le mÃªme service que celle analysÃ©e ici.
 			</p>
 			<h2 id="client">II. Le client</h2>
 			<p>
-				Il est désormais souhaité de construire un client XHTML permettant d'envoyer une requête au service web utilisé précédement
-				et d'afficher la réponse de manière lisible sans rafraichissement de la page. L'API Ajax de javascript répond
-				parfaitement à ce besoin. 
+				Il est dÃ©sormais souhaitÃ© de construire un client XHTML permettant d'envoyer une requÃªte au service web utilisÃ© prÃ©cÃ©dement
+				et d'afficher la rÃ©ponse de maniÃ¨re lisible sans rafraichissement de la page. L'API Ajax de javascript rÃ©pond
+				parfaitement Ã  ce besoin. 
 			</p>
 			<h3 id="formulaire">a. Le formulaire</h3>
 			<p>
-				Le client XHTML n'est en fait qu'un simple formulaire premettant à l'utilisateur d'indiquer le numéro du département dont il
-				veut connaître les détails.
+				Le client XHTML n'est en fait qu'un simple formulaire premettant Ã  l'utilisateur d'indiquer le numÃ©ro du dÃ©partement dont il
+				veut connaÃ®tre les dÃ©tails.
 			</p>
 			<div class="panel panel-default code-panel">
 				<div class="panel-heading">
@@ -135,7 +135,7 @@
 												&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-9"</span> 
 												<span class="attribut">style</span>=<span class="valeur">"text-align:right;"</span>&gt;<br/>
 												<div class="tab">
-													&lt;label <span class="attribut">class</span>=<span class="valeur">"control-label"</span>&gt;<span class="contenuTexte">Numéro de département : </span>&lt;/label&gt;<br/>
+													&lt;label <span class="attribut">class</span>=<span class="valeur">"control-label"</span>&gt;<span class="contenuTexte">NumÃ©ro de dÃ©partement : </span>&lt;/label&gt;<br/>
 												</div>
 												&lt;/div&gt;<br/>
 												&lt;div <span class="attribut">class</span>=<span class="valeur">"col-md-2"</span>&gt;<br/>
@@ -174,26 +174,26 @@
 				</div>
 			</div>
 			<p>
-				L'entête du client est classique et ne présente aucune particularité, c'est pourquoi elle est absente de l'extrait de code ci-dessus.
-				Cet extrait est utilisé pour créer un formulaire contenant un label, un champ de saisie de texte et un bouton. Le bouton est de
+				L'entÃªte du client est classique et ne prÃ©sente aucune particularitÃ©, c'est pourquoi elle est absente de l'extrait de code ci-dessus.
+				Cet extrait est utilisÃ© pour crÃ©er un formulaire contenant un label, un champ de saisie de texte et un bouton. Le bouton est de
 				<code class="codeXML attribut">type</code> <code class="codeXML valeur">"submit"</code> afin d'envoyer le formulaire au 
 				destinataire, cependant l'attribut <code class="codeXML attribut">action</code> de la balise 
 				<code class="codeXML">&lt;form&gt;</code> a pour valeur <code class="codeXML valeur">"javascript:;"</code>. Ceci signifie que
-				le traitement des données du formulaire lors d'un clique sur le bouton est réalisé par un script javascript. Celui-ci doit donc
-				être présent dans le document sinon il ne se passera rien.
+				le traitement des donnÃ©es du formulaire lors d'un clique sur le bouton est rÃ©alisÃ© par un script javascript. Celui-ci doit donc
+				Ãªtre prÃ©sent dans le document sinon il ne se passera rien.
 			</p>
 			<p>
-				Il y a également une balise <code class="codeXML">&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;</code>
-				qui ne contient rien. Celle-ci sera utilisé par la suite pour afficher la réponse du serveur à l'aide d'une fonction javascript. Enfin
-				la dernière balise <code class="codeXML">&lt;script&gt;</code> contiendra le code javascript nécessaire au bon fonctionnement du client.
+				Il y a Ã©galement une balise <code class="codeXML">&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;</code>
+				qui ne contient rien. Celle-ci sera utilisÃ© par la suite pour afficher la rÃ©ponse du serveur Ã  l'aide d'une fonction javascript. Enfin
+				la derniÃ¨re balise <code class="codeXML">&lt;script&gt;</code> contiendra le code javascript nÃ©cessaire au bon fonctionnement du client.
 			</p>
 			<h3 id="script">b. Le script</h3>
 			<p>
-				Maintenant que le formulaire est en place le script javascript peut être ajouté. Il sera placé à la fin du fichier XHTML, juste
+				Maintenant que le formulaire est en place le script javascript peut Ãªtre ajoutÃ©. Il sera placÃ© Ã  la fin du fichier XHTML, juste
 				avant la fermeture de la balise <code class="codeXML">&lt;body&gt;</code>. L'emplacement du code javascript dans une page HTML n'a
-				pas vraiment d'importance puisqu'il est interprété après le chargement de la page. Cependant les parseurs des navigateurs "lisent" les
-				fichiers HTML de haut en bas et affichent le contenu ainsi "lu" au fur et à mesure. Donc le faite de placer le code javascript à la fin
-				du fichier évite de ralentir l'affichage de la page. Néanmoins ici le code javascript utilisé est vraiment léger et la nuance serait
+				pas vraiment d'importance puisqu'il est interprÃ©tÃ© aprÃ¨s le chargement de la page. Cependant les parseurs des navigateurs "lisent" les
+				fichiers HTML de haut en bas et affichent le contenu ainsi "lu" au fur et Ã  mesure. Donc le faite de placer le code javascript Ã  la fin
+				du fichier Ã©vite de ralentir l'affichage de la page. NÃ©anmoins ici le code javascript utilisÃ© est vraiment lÃ©ger et la nuance serait
 				difficilement observable.
 			</p>
 			<div class="panel panel-default code-panel">
@@ -251,7 +251,7 @@
 								<div class="tab">
 									requestObject = <span class="variable">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>); <br/>
 								</div>
-								<span class="variable">else</span> {<span class="comment"> // XMLHttpRequest non supporté par le navigateur</span> <br/>
+								<span class="variable">else</span> {<span class="comment"> // XMLHttpRequest non supportÃ© par le navigateur</span> <br/>
 								<div class="tab">   
 								   alert(<span class="string">"Votre navigateur ne supporte pas les objets XMLHTTPRequest..."</span>); <br/>
 								</div>
@@ -324,38 +324,38 @@
 				</div>
 			</div>
 			<p>
-				Le code ci-dessus est le code javascript complet utilisé pour envoyer la requête au serveur et traiter la réponse. Ce script
-				est composé de cinq fonctions dont une anonyme. La fonction anonyme permet d'isoler le code traitant l'action d'un clique
+				Le code ci-dessus est le code javascript complet utilisÃ© pour envoyer la requÃªte au serveur et traiter la rÃ©ponse. Ce script
+				est composÃ© de cinq fonctions dont une anonyme. La fonction anonyme permet d'isoler le code traitant l'action d'un clique
 				sur le bouton du formulaire. Celle-ci envoie le contenu du champ de saisie en attribut de la fonction <code class="codeJS">query(departNumber)</code>.
-				Cette dernière a pour but la construction de la requète en respectant le formalisme du XML-RPC comme vu dans la première partie. Elle
-				transmet ensuite la requète ainsi construite à la fonction <code class="codeJS">sendRequest(messageBody)</code> qui, comme son nom l'indique,
-				s'occupe d'envoyer la requête. Les paramètres nécessaire au protocole XML-RPC sont fixé arbitrairement pour que la requète soit 
-				systématiquement transmise au serveur. La construction de l'objet XMLHttpRequest se fait avec la fonction <span class="codeJS">initXmlHttpRequest()</span>
-				qui s'adapte au navigateur et signale une erreur de compatibilité si celui-ci ne supporte pas l'objet XMLHttpRequest. Enfin la réponse à
-				la requète est directement transmise à la fonction <code class="codeJS">displayResponse(xmlDocumentResponse)</code> qui est chargée de
-				l'intégrer au code xhtml, entre les balises 
+				Cette derniÃ¨re a pour but la construction de la requÃ¨te en respectant le formalisme du XML-RPC comme vu dans la premiÃ¨re partie. Elle
+				transmet ensuite la requÃ¨te ainsi construite Ã  la fonction <code class="codeJS">sendRequest(messageBody)</code> qui, comme son nom l'indique,
+				s'occupe d'envoyer la requÃªte. Les paramÃ¨tres nÃ©cessaire au protocole XML-RPC sont fixÃ© arbitrairement pour que la requÃ¨te soit 
+				systÃ©matiquement transmise au serveur. La construction de l'objet XMLHttpRequest se fait avec la fonction <span class="codeJS">initXmlHttpRequest()</span>
+				qui s'adapte au navigateur et signale une erreur de compatibilitÃ© si celui-ci ne supporte pas l'objet XMLHttpRequest. Enfin la rÃ©ponse Ã 
+				la requÃ¨te est directement transmise Ã  la fonction <code class="codeJS">displayResponse(xmlDocumentResponse)</code> qui est chargÃ©e de
+				l'intÃ©grer au code xhtml, entre les balises 
 				<code class="codeXML">&lt;div <span class="attribut">id</span>=<span class="valeur">"response"</span>&gt;&lt;/div&gt;</code>.
 			</p>
 			<p>
-				Notons l'intérêt de l'objet XMLHttpRequest puisqu'il permet d'ouvrir une communication avec un serveur distant
-				en respectant le protocole XML-RPC, de vérifier le bon déroulement de la transmission et de récupérer la réponse directement
-				sous la forme d'une application XML. Le fait que la réponse soit un document XML à part entière facilite grandement son traitement
+				Notons l'intÃ©rÃªt de l'objet XMLHttpRequest puisqu'il permet d'ouvrir une communication avec un serveur distant
+				en respectant le protocole XML-RPC, de vÃ©rifier le bon dÃ©roulement de la transmission et de rÃ©cupÃ©rer la rÃ©ponse directement
+				sous la forme d'une application XML. Le fait que la rÃ©ponse soit un document XML Ã  part entiÃ¨re facilite grandement son traitement
 				par l'utilisation de fonctions internes au javascript telles que <code class="codeJS">getElementsByTagName(tagName)</code>. D'autre
-				part l'affichage de la réponse est effectivement instantané (hormis les délais de transmission, de traitement et d'affichage) et 
-				ne nécessite aucun rafraîchissement de la page.
+				part l'affichage de la rÃ©ponse est effectivement instantanÃ© (hormis les dÃ©lais de transmission, de traitement et d'affichage) et 
+				ne nÃ©cessite aucun rafraÃ®chissement de la page.
 			</p>
 			<p>
-				Finalement le code javascript nécessaire au bon fonctionnement de ce client en utilisant le protocole XML-RPC est d'une grande
-				simplicité. Plusieurs amélioration peuvent être envisagées mais elles ne changerons pas fondamentalement l'efficacité de ce code.
-				Le code source complet du client peut-être observer en cliquant sur ce <a href="livrables\client.html">lien</a>.
+				Finalement le code javascript nÃ©cessaire au bon fonctionnement de ce client en utilisant le protocole XML-RPC est d'une grande
+				simplicitÃ©. Plusieurs amÃ©lioration peuvent Ãªtre envisagÃ©es mais elles ne changerons pas fondamentalement l'efficacitÃ© de ce code.
+				Le code source complet du client peut-Ãªtre observer en cliquant sur ce <a href="livrables\client.html">lien</a>.
 			</p>
 			<h2 id="conclusion">Conclusion</h2>
 			<p>
-				XML-RPC n'est pas la seule solution existante pour répondre à la problèmatique de la transmission de données XML. Cependant
-				il reste le moyen le plus simple et le plus répendu. L'utilisation d'autres solutions comme SOAP sont souvent bien trop soffistiqués
-				et ont un intérêt trop spécifique. Cependant XML-RPC est limité par ses spécifications qui manquent de rigueur
-				et peut parfois être inadapté. Le choix du protocole a utiliser sera donc particulier à chaque situation et il est tout à fait
-				envisageable d'utiliser plusieurs solutions pour une même application.
+				XML-RPC n'est pas la seule solution existante pour rÃ©pondre Ã  la problÃ¨matique de la transmission de donnÃ©es XML. Cependant
+				il reste le moyen le plus simple et le plus rÃ©pendu. L'utilisation d'autres solutions comme SOAP sont souvent bien trop soffistiquÃ©s
+				et ont un intÃ©rÃªt trop spÃ©cifique. Cependant XML-RPC est limitÃ© par ses spÃ©cifications qui manquent de rigueur
+				et peut parfois Ãªtre inadaptÃ©. Le choix du protocole a utiliser sera donc particulier Ã  chaque situation et il est tout Ã  fait
+				envisageable d'utiliser plusieurs solutions pour une mÃªme application.
 			</p>
 		</div>
 	</body>
